@@ -4,4 +4,5 @@
 # Frontend: HTML, CSS, Bootstrap 4
 # Backend: JavaScript, PHP (maybe)
 # Database: MySQL
-# Webhost: ???
+# Webhost: GitHub Pages
+
