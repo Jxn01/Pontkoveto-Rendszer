@@ -4,6 +4,6 @@
 # Frontend: HTML, CSS, Bootstrap 4
 # Backend: JavaScript, PHP (maybe)
 # Database: MySQL
-# Webhost: GitHub Pages
+# Webhost: https://jxn01.github.io/Pontkoveto-Rendszer/
 # Trello: https://trello.com/b/gy9ob0HZ
 
