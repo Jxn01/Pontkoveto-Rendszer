@@ -1,17 +1,4 @@
-html{
-    background: rgb(145,0,0);
-    background: linear-gradient(180deg, rgb(112, 0, 0) 0%, rgba(255,44,44,1) 100%); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-}
-h1{
-    
-    text-align: center;
-    color: cornsilk;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30vh ;
+
 
 
 }
