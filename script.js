@@ -26,8 +26,8 @@ function $(id) {
 function init() {
     $("loginButton").addEventListener("onclick", login, false);
     $("regButton").addEventListener("onclick", registration, false);
-    $("toRegPageButton").addEventListener("onclick", backToRegPage, false);
-    $("loginPageButton").addEventListener("onclick", backToLoginPage, false);
+    $("toRegPageButton").addEventListener("click", backToRegPage, false);
+    $("loginPageButton").addEventListener("click", backToLoginPage, false);
 }
 
 function login(emailUser, omUser, teacherUser, emailData, omData) {
