@@ -27,9 +27,9 @@ function $(id) {
 
 function init() {
     $("loginButton").addEventListener("onclick", login(), false);
-    $("regButton").addEventListener("onclick", registration(), false);
+    //$("regButton").addEventListener("onclick", registration(), false);
     $("toRegPageButton").addEventListener("onclick", backToRegPage(), false);
-    $("backToLoginButton").addEventListener("onclick", backToLoginPage(), false);
+    //$("backToLoginButton").addEventListener("onclick", backToLoginPage(), false);
 }
 
 function login(emailUser, omUser, teacherUser, emailData, omData) {
@@ -81,10 +81,10 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    window.location.href = "registration.html";
+    location.href = "registration.html";
 }
 
 function backToLoginPage() {
-    window.location.href = "index.html";
+    location.href = "index.html";
 }
 
