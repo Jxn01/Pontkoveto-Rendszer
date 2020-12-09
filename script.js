@@ -61,27 +61,27 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
     teacherUser = $("inputTeacherReg").value;
     if(!teacherUser){
         
-        //writing
+        //writing to diakok
         if(successful){
-
+            //href to diak tablazat
         }else{
-
+            //error
         }
     }else{
-        
-        //writing
-        if(successful){
 
+        //writing to tanarok
+        if(successful){
+            //href to tanar tablazat
         }else{
-            
+            //error
         }
     }
 }
 
 function backToRegPage() {
-    location.href = "regsztracio.html";
+    location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
 }
 
 function backToLoginPage() {
-    location.href = "index.html";
+    location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
 }
