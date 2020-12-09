@@ -81,10 +81,10 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/registration.html";
+    window.location.href = "registration.html";
 }
 
 function backToLoginPage() {
-    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
+    window.location.href = "index.html";
 }
 
