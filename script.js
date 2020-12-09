@@ -56,7 +56,7 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
     var successful = false;
     nameUser = $("inputNameReg").value;
     emailUser = $("inputEmailReg").value;
-    classUser = $("inputClassReg")
+    classUser = $("inputClassReg").value;
     omUser = $("inputOMReg").value;
     teacherUser = $("inputTeacherReg").value;
     if(!teacherUser){
@@ -79,9 +79,9 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
+    window.location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
 }
 
 function backToLoginPage() {
-    location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
+    window.location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
 }
