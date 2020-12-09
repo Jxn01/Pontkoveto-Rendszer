@@ -87,4 +87,5 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 init();
+backToRegPage();
 
