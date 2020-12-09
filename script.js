@@ -79,9 +79,9 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    window.location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
+    window.location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
 }
 
 function backToLoginPage() {
-    window.location.href = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
+    window.location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
 }
