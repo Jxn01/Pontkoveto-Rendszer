@@ -1,5 +1,3 @@
-var nameUser = "";
-var classUser = "";
 var emailUser = "";
 var omUser = "";
 var teacherUser = false;
@@ -27,9 +25,7 @@ function $(id) {
 
 function init() {
     $("loginButton").addEventListener("onclick", login(), false);
-    //$("regButton").addEventListener("onclick", registration(), false);
-    $("toRegPageButton").addEventListener("onclick", backToRegPage(), false);
-    //$("backToLoginButton").addEventListener("onclick", backToLoginPage(), false);
+    $("toRegPageButton").addEventListener("onclick", backToRegPage(), false); 
 }
 
 function login(emailUser, omUser, teacherUser, emailData, omData) {
@@ -54,37 +50,8 @@ function login(emailUser, omUser, teacherUser, emailData, omData) {
     }
 }
 
-function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
-    var successful = false;
-    nameUser = $("inputNameReg").value;
-    emailUser = $("inputEmailReg").value;
-    classUser = $("inputClassReg").value;
-    omUser = $("inputOMReg").value;
-    teacherUser = $("inputTeacherReg").value;
-    if(!teacherUser){
-        
-        //writing to diakok
-        if(successful){
-            //href to diak tablazat
-        }else{
-            //error
-        }
-    }else{
-
-        //writing to tanarok
-        if(successful){
-            //href to tanar tablazat
-        }else{
-            //error
-        }
-    }
-}
-
 function backToRegPage() {
     location.href = "registration.html";
 }
 
-function backToLoginPage() {
-    location.href = "index.html";
-}
 
