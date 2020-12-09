@@ -19,6 +19,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+init();
+
 function $(id) {
     return document.getElementById(id);
 }
@@ -35,6 +37,7 @@ function login(emailUser, omUser, teacherUser, emailData, omData) {
     emailUser = $("inputEmailLogin").value;
     omUser = $("inputOMLogin").value;
     teacherUser = $("inputTeacherLogin").value;
+    console.log("Kurva isten fasza.");
     if (!teacherUser) {
         //logika
         if (successful) {
