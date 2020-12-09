@@ -6,7 +6,7 @@ function init() {
     $("loginButton").addEventListener("onclick", login, false);
     $("regButton").addEventListener("onclick", registration, false);
     $("toRegPageButton").addEventListener("onclick", backToRegPage, false);
-    $("loginPageButton").addEventListener("onclick", backToLoginPage, false);
+    $("backToLoginButton").addEventListener("onclick", backToLoginPage, false);
 }
 
 function login(emailUser, omUser, teacherUser, emailData, omData) {
@@ -14,7 +14,6 @@ function login(emailUser, omUser, teacherUser, emailData, omData) {
     emailUser = $("inputEmailLogin").value;
     omUser = $("inputOMLogin").value;
     teacherUser = $("inputTeacherLogin").value;
-    console.log("Kurva isten fasza.");
     if (!teacherUser) {
         //logika
         if (successful) {
