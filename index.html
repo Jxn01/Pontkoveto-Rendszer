@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <div class="container d-flex justify-content-center">
         <div class="row">
             <div class="jumbotron" id="loginJumbotron">
@@ -39,13 +40,14 @@
                         <input type="checkbox" class="form-check-input" id="inputTanarELogin">
                         <label class="form-check-label" for="inputTanarELogin">Tanár</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Bejelentkezés</button>
-                    <button type="button" class="btn btn-primary" onclick="location.href = 'regisztracio.html'">Regisztráció</button>
+                    <button type="submit" class="btn btn-primary" id="loginButton">Bejelentkezés</button>
+                    <button type="button" class="btn btn-primary" id="toRegPageButton">Regisztráció</button>
                 </form>
             </div>
         </div>
     </div>
-    <!-- Bootstrap javascript -->
+
+    <!-- Bootstrap javascript --> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -59,21 +61,9 @@
     <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
 
-    <!-- Firebase initialization -->
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyD9YNIhkl9msLIA8-Q0ND0k41CWY4gSo3w",
-            authDomain: "pontkoveto.firebaseapp.com",
-            projectId: "pontkoveto",
-            storageBucket: "pontkoveto.appspot.com",
-            messagingSenderId: "1095203857581",
-            appId: "1:1095203857581:web:f94ec69a0931212ba19224",
-            measurementId: "G-BGPH18HJK0"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
+    <!-- Firebase + JS -->
+    <script src="script.js"></script> 
+    
 </body>
 
 </html

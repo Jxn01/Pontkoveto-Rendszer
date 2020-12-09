@@ -27,8 +27,8 @@
                 <form>
                     <div class="form-group">
 
-                        <label for="inputNevReg">Teljes név</label>
-                        <input type="text" class="form-control" id="inputNevReg" aria-describedby="nevHelp">
+                        <label for="inputNameReg">Teljes név</label>
+                        <input type="text" class="form-control" id="inputNameReg" aria-describedby="nameHelp">
                         
                     </div>
                     <div class="form-group">
@@ -36,29 +36,31 @@
                         <input type="email" class="form-control" id="inputEmailReg" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
-                        <label for="inputOsztalyReg">Osztály</label>
-                        <input type="text" class="form-control" id="inputOsztalyReg" aria-describedby="osztalyHelp">
+                        <label for="inputClassReg">Osztály</label>
+                        <input type="text" class="form-control" id="inputClassReg" aria-describedby="classHelp">
                     </div>
                     <div class="form-group">
                         <label for="inputOMReg">OM azonosító</label>
                         <input type="password" class="form-control" id="inputOMReg">
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="inputTanarEReg">
-                        <label class="form-check-label" for="inputTanarEReg">Tanár</label>
-                        <small id="tanarHelp" class="form-text text-muted">Csak akkor pipáld be, ha tanár vagy!</small>
+                        <input type="checkbox" class="form-check-input" id="inputTeacherReg">
+                        <label class="form-check-label" for="inputTeacherReg">Tanár</label>
+                        <small id="teacherHelp" class="form-text text-muted">Csak akkor pipáld be, ha tanár vagy!</small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Regisztráció</button>
-                    <button type="button" class="btn btn-primary" onclick="location.href = 'index.html'">Vissza a
+                    <button type="submit" class="btn btn-primary" id="regButton">Regisztráció</button>
+                    <button type="button" class="btn btn-primary" id="backToLoginButton">Vissza a
                         bejelentkezéshez</button>
                 </form>
             </div>
         </div>
     </div>
+
     <!-- Bootstrap javascript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
@@ -69,21 +71,8 @@
     <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
 
-    <!-- Firebase initialization -->
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyD9YNIhkl9msLIA8-Q0ND0k41CWY4gSo3w",
-            authDomain: "pontkoveto.firebaseapp.com",
-            projectId: "pontkoveto",
-            storageBucket: "pontkoveto.appspot.com",
-            messagingSenderId: "1095203857581",
-            appId: "1:1095203857581:web:f94ec69a0931212ba19224",
-            measurementId: "G-BGPH18HJK0"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
+    <!-- Firebase + JS -->
+    <script src="script.js"></script> 
 </body>
 
 </html
