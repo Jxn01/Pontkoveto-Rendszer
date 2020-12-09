@@ -59,7 +59,7 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
+    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/registration.html";
 }
 
 function backToLoginPage() {
