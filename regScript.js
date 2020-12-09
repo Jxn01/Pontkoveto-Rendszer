@@ -25,6 +25,7 @@ function $(id) {
 
 function init() {
     $("backToLoginButton").addEventListener("click", backToLoginPage);
+    $("regButton").addEventListener("click", registration);
 }
 
 function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
