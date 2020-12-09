@@ -17,7 +17,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-init();
+window.addEventListener("load", init);
 
 function $(id) {
     return document.getElementById(id);
