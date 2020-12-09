@@ -26,8 +26,8 @@ function $(id) {
 function init() {
     $("loginButton").addEventListener("onclick", login, false);
     $("regButton").addEventListener("onclick", registration, false);
-    $("toRegPageButton").addEventListener("click", backToRegPage, false);
-    $("loginPageButton").addEventListener("click", backToLoginPage, false);
+    $("toRegPageButton").addEventListener("onclick", backToRegPage, false);
+    $("loginPageButton").addEventListener("onclick", backToLoginPage, false);
 }
 
 function login(emailUser, omUser, teacherUser, emailData, omData) {
@@ -79,9 +79,9 @@ function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
 }
 
 function backToRegPage() {
-    window.location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
+    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/regsztracio.html";
 }
 
 function backToLoginPage() {
-    window.location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
+    location.replace = "https://jxn01.github.io/Pontkoveto-Rendszer/index.html";
 }
