@@ -26,7 +26,7 @@ function $(id) {
 function init() {
     $("loginButton").addEventListener("onclick", login, false);
     $("regButton").addEventListener("onclick", registration, false);
-    $("regPageButton").addEventListener("onclick", backToRegPage, false);
+    $("toRegPageButton").addEventListener("onclick", backToRegPage, false);
     $("loginPageButton").addEventListener("onclick", backToLoginPage, false);
 }
 
