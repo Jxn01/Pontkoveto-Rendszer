@@ -1,5 +1,5 @@
 var nameUser = "";
-var classroomUser = "";
+var classUser = "";
 var emailUser = "";
 var omUser = "";
 var teacherUser = false;
@@ -34,7 +34,7 @@ function login(emailUser, omUser, teacherUser, emailData, omData) {
     var successful = false;
     emailUser = $("inputEmailLogin").value;
     omUser = $("inputOMLogin").value;
-    teacherUser = $("inputTeacherELogin").value;
+    teacherUser = $("inputTeacherLogin").value;
     if (!teacherUser) {
         //logika
         if (successful) {
@@ -52,8 +52,30 @@ function login(emailUser, omUser, teacherUser, emailData, omData) {
     }
 }
 
-function registration(nameUser, emailUser, classroomUser, omUser, teacherUser) {
+function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
+    var successful = false;
+    nameUser = $("inputNameReg").value;
+    emailUser = $("inputEmailReg").value;
+    classUser = $("inputClassReg")
+    omUser = $("inputOMReg").value;
+    teacherUser = $("inputTeacherReg").value;
+    if(!teacherUser){
+        
+        //writing
+        if(successful){
 
+        }else{
+
+        }
+    }else{
+        
+        //writing
+        if(successful){
+
+        }else{
+            
+        }
+    }
 }
 
 function backToRegPage() {
