@@ -1,9 +1,3 @@
-var emailUser = "";
-var omUser = "";
-var teacherUser = false;
-var emailData = "";
-var omData = "";
-
 var firebaseConfig = {
     apiKey: "AIzaSyD9YNIhkl9msLIA8-Q0ND0k41CWY4gSo3w",
     authDomain: "pontkoveto.firebaseapp.com",
@@ -25,14 +19,16 @@ function $(id) {
 
 function init() {
     $("toRegPageButton").addEventListener("click", backToRegPage);
-    $("loginbutton").addEventListener("click", login); 
+    //$("loginbutton").addEventListener("click", login); 
+    $("diakButton").addEventListener("click", toDiakPage);
+    $("tanarButton").addEventListener("click", toTanarPage);
 }
 
-function login(emailUser, omUser, teacherUser, emailData, omData) {
+function login() {
     var successful = false;
-    emailUser = $("inputEmailLogin").value;
-    omUser = $("inputOMLogin").value;
-    teacherUser = $("inputTeacherLogin").value;
+    var emailUser = $("inputEmailLogin").value;
+    var omUser = $("inputOMLogin").value;
+    var teacherUser = $("inputTeacherLogin").value;
     if (!teacherUser) {
         //logika
         if (successful) {
@@ -54,4 +50,11 @@ function backToRegPage() {
     location.href = "registration.html";
 }
 
+function toDiakPage() {
+    location.href = "student.html"
+}
+
+function toTanarPage() {
+    location.href = "teacher.html"
+}
 

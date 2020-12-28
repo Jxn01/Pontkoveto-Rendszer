@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Küldetések</title>
+  <link rel="stylesheet" type="text/css" href="style/loggedInStylesheet.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container navbar-margin">
+    <div class="row">
+      <div class="col-2">
+        <img src="images/bronze.jpg" style="width: 3vh" alt="bronze" class="kozep" id="bronze" />
+      </div>
+      <div class="col-2">
+        <img src="images/silver.jpg" style="width: 3vh" alt="silver" class="kozep" id="silver" />
+      </div>
+      <div class="col-2">
+        <img src="images/gold.jpg" style="width: 3vh" alt="gold" class="kozep" id="gold" />
+      </div>
+      <div class="col-5">
+        <h2 id="textkozep">NameName</h2>
+      </div>
+      <div class="col-1">
+        <button type="button" class="btn btn-primary" id="logoutButton">Kijelentkezés</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="upper">00:00:00:00</div>
+
+  <div class="container">
+    <div id="quest">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Első küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Kettő küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Harmadik küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Negyedik küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Ötödik küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
+            <div class="carousel-caption">
+              <h3>Hatodik küldetés</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+    <div id="gombnak">
+      <a href="#" class="btn btn-block btn-lg" id="submit">Küldetés kész</a>
+    </div>
+
+    <div class="overflow-auto" style="height: 30vh; width: 70vw">
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <!-- Firebase js import -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+  <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+  <!-- Firebase + JS -->
+  <script src="script/studentScript.js"></script>
+
+</body>
+
+</html>
