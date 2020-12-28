@@ -1,9 +1,3 @@
-var nameUser = "";
-var classUser = "";
-var emailUser = "";
-var omUser = "";
-var teacherUser = false;
-
 var firebaseConfig = {
     apiKey: "AIzaSyD9YNIhkl9msLIA8-Q0ND0k41CWY4gSo3w",
     authDomain: "pontkoveto.firebaseapp.com",
@@ -28,13 +22,13 @@ function init() {
     $("regButton").addEventListener("click", registration);
 }
 
-function registration(nameUser, emailUser, classUser, omUser, teacherUser) {
+function registration() {
     var successful = false;
-    nameUser = $("inputNameReg").value;
-    emailUser = $("inputEmailReg").value;
-    classUser = $("inputClassReg").value;
-    omUser = $("inputOMReg").value;
-    teacherUser = $("inputTeacherReg").value;
+    var nameUser = $("inputNameReg").value;
+    var emailUser = $("inputEmailReg").value;
+    var classUser = $("inputClassReg").value;
+    var omUser = $("inputOMReg").value;
+    var teacherUser = $("inputTeacherReg").value;
     if(!teacherUser){
         
         //writing to diakok
