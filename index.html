@@ -1,13 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hu">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Küldetések</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Pontkövető rendszer</title>
 </head>
+
 <body>
-    <p>XDD</p>
-    
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="jumbotron" id="loginJumbotron">
+                <h1 class="display-4 d-flex justify-content-center">Pontkövető-rendszer</h1>
+                <p class="lead d-flex justify-content-center">Ennek a felületnek a segítségével tudsz bejelentkezni a
+                    pontkövető-rendszerbe.</p>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmailLogin">E-mail cím</label>
+                        <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">E-mail címedet biztonságosan
+                            kezeljük.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputOMLogin">OM azonosító</label>
+                        <input type="password" class="form-control" id="inputOMLogin">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="inputTeacherLogin">
+                        <label class="form-check-label" for="inputTeacherLogin">Tanár</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="loginButton">Bejelentkezés</button>
+                    <button type="button" class="btn btn-primary" id="toRegPageButton">Regisztráció</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+    <!-- Firebase js import -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <!-- Firebase + JS -->
+    <script src="loginScript.js"></script>
+
 </body>
-</html>
+
+</html
