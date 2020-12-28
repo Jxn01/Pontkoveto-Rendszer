@@ -10,6 +10,8 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var database = firebase.database();
+
 
 window.addEventListener("load", init);
 
@@ -21,8 +23,15 @@ function init() {
     $("logoutButton").addEventListener("click", logout);
 }
 
-function logout(){
-    location.href = "index.html"
+function logout() {
+    firebase.auth().signOut().then(function () {
+        location.href = "index.html"
+    }).catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        $("failedLogoutStudent").innerHTML = errorMessage;
+        $("failedLogoutStudent").style.visibility = "visible";
+    });
 }
 
 

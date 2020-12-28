@@ -59,3 +59,33 @@ body {
 .navbar-margin {
     margin-top: 10px;
 }
+
+#failedLogoutStudent{
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+#failedLogoutTeacher{
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+.margin-bottom{
+    margin-bottom: 50px;
+}
+
+#bronze{
+    visibility: hidden;
+}
+
+#silver{
+    visibility: hidden;
+}
+
+#gold{
+    visibility: hidden;
+}
+
+.badge{
+    width: 3vh
+}

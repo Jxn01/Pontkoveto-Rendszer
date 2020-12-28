@@ -10,6 +10,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var database = firebase.database();
 
 window.addEventListener("load", init);
 
@@ -18,32 +19,44 @@ function $(id) {
 }
 
 function init() {
+    const form = document.querySelector("#login");
+    form.addEventListener("submit", login);
     $("toRegPageButton").addEventListener("click", backToRegPage);
-    //$("loginbutton").addEventListener("click", login); 
     $("diakButton").addEventListener("click", toDiakPage);
     $("tanarButton").addEventListener("click", toTanarPage);
 }
 
-function login() {
-    var successful = false;
-    var emailUser = $("inputEmailLogin").value;
-    var omUser = $("inputOMLogin").value;
-    var teacherUser = $("inputTeacherLogin").value;
-    if (!teacherUser) {
-        //logika
-        if (successful) {
-            location.href = "diaktablazat.html";
-        } else {
-            //hiba
-        }
-    } else {
-        //logika
-        if (successful) {
-            location.href = "diaktablazat.html";
-        } else {
-            //hiba
-        }
-    }
+function login(event) {
+    event.preventDefault();
+    var email = document.querySelector("#inputEmailLogin").value;
+    var password = document.querySelector("#inputOMLogin").value;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((user) => {
+            if (document.querySelector("#inputTeacherLogin").checked) {
+                location.href = "teacher.html"
+            } else {
+                location.href = "student.html"
+            }
+        }).catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            $("failedLogin").style.visibility = "visible";
+            switch (errorCode) {
+                case "auth/invalid-email":
+                    $("failedLogin").innerHTML = "A megadott e-mail cím nem megfelelő.";
+                    break;
+
+                case "auth/user-not-found":
+                    $("failedLogin").innerHTML = "Nincs ilyen regisztrált felhasználó.";
+                    break;
+
+                case "auth/wrong-password":
+                    $("failedLogin").innerHTML = "A jelszó helytelen.";
+                    break;
+            }
+            setTimeout(function(){ $("failedLogin").style.visibility = "hidden"; }, 4000);
+
+        });
 }
 
 function backToRegPage() {
@@ -57,4 +70,3 @@ function toDiakPage() {
 function toTanarPage() {
     location.href = "teacher.html"
 }
-

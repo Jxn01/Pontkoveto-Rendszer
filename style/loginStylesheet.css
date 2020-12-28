@@ -5,3 +5,25 @@ html, body {
 #loginJumbotron{
     background-color: white;
 }
+
+#failedReg{
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+#failedLogin{
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+#loginDiv{
+    visibility: visible;
+}
+
+#teacherDiv{
+    visibility: hidden;
+}
+
+#studentDiv{
+    visibility: hidden;
+}
