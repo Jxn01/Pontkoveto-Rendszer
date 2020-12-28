@@ -10,6 +10,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var database = firebase.database();
 
 window.addEventListener("load", init);
 
@@ -18,34 +19,43 @@ function $(id) {
 }
 
 function init() {
+    const form = document.querySelector("#registration");
+    form.addEventListener("submit", registration);
     $("backToLoginButton").addEventListener("click", backToLoginPage);
-    $("regButton").addEventListener("click", registration);
 }
 
-function registration() {
-    var successful = false;
-    var nameUser = $("inputNameReg").value;
-    var emailUser = $("inputEmailReg").value;
-    var classUser = $("inputClassReg").value;
-    var omUser = $("inputOMReg").value;
-    var teacherUser = $("inputTeacherReg").value;
-    if(!teacherUser){
-        
-        //writing to diakok
-        if(successful){
-            //href to diak tablazat
-        }else{
-            //error
-        }
-    }else{
+function registration(event) {
+    event.preventDefault();
+    var email = document.querySelector("#inputEmailReg").value;
+    var password = document.querySelector("#inputOMReg").value;
+    var name = document.querySelector("#inputNameReg").value;
+    var sClass = document.querySelector("#inputClassReg").value;
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((user) => {
+            location.href = "index.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            $("failedReg").style.visibility = "visible";
+            switch (errorCode) {
+                case "auth/invalid-email":
+                    $("failedReg").innerHTML = "A megadott e-mail cím nem megfelelő.";
+                    break;
 
-        //writing to tanarok
-        if(successful){
-            //href to tanar tablazat
-        }else{
-            //error
-        }
-    }
+                case "auth/weak-password":
+                    $("failedReg").innerHTML = "A jelszónak minimum 6 karakter hosszúnak kell lennie.";
+                    break;
+
+                case "auth/email-already-in-use":
+                    $("failedReg").innerHTML = "Ez az e-mail cím már használatban van.";
+                    break;
+
+                default:
+                    $("failedReg").innerHTML = errorMessage;
+                    break;
+            }
+        });
 }
 
 function backToLoginPage() {
