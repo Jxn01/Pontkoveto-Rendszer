@@ -26,38 +26,88 @@ function init() {
 
 function registration(event) {
     event.preventDefault();
-    var email = document.querySelector("#inputEmailReg").value;
-    var password = document.querySelector("#inputOMReg").value;
-    var name = document.querySelector("#inputNameReg").value;
-    var sClass = document.querySelector("#inputClassReg").value;
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((user) => {
-            location.href = "index.html";
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            $("failedReg").style.visibility = "visible";
-            switch (errorCode) {
-                case "auth/invalid-email":
-                    $("failedReg").innerHTML = "A megadott e-mail cím nem megfelelő.";
-                    break;
+    var teacher = false;
+    try {
+        validation();
+        var email = document.querySelector("#inputEmailReg").value;
+        var password = document.querySelector("#inputOMReg").value;
+        var name = document.querySelector("#inputNameReg").value;
+        var sClass = document.querySelector("#inputClassReg").value;
+        if (document.querySelector("#inputTeacherReg").checked) {
+            teacher = true;
+        }
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((user) => {
+                var userID = firebase.auth().currentUser.uid;
+                writeUserData(userID, name, email, sClass, teacher);
+                //location.href = "index.html";
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                $("failedReg").style.visibility = "visible";
+                switch (errorCode) {
+                    case "auth/invalid-email":
+                        $("failedReg").innerHTML = "A megadott e-mail cím nem megfelelő.";
+                        break;
 
-                case "auth/weak-password":
-                    $("failedReg").innerHTML = "A jelszónak minimum 6 karakter hosszúnak kell lennie.";
-                    break;
+                    case "auth/email-already-in-use":
+                        $("failedReg").innerHTML = "Ez az e-mail cím már használatban van.";
+                        break;
 
-                case "auth/email-already-in-use":
-                    $("failedReg").innerHTML = "Ez az e-mail cím már használatban van.";
-                    break;
+                    default:
+                        $("failedReg").innerHTML = errorMessage;
+                        break;
+                }
+                setTimeout(function () { $("failedReg").style.visibility = "hidden"; }, 4000);
+            });
 
-                default:
-                    $("failedReg").innerHTML = errorMessage;
-                    break;
-            }
-        });
+    } catch (e) {
+        $("failedReg").style.visibility = "visible";
+        $("failedReg").innerHTML = e;
+        setTimeout(function () { $("failedReg").style.visibility = "hidden"; }, 4000);
+    }
 }
 
 function backToLoginPage() {
     location.href = "index.html";
+}
+
+function validation() {
+    if (document.querySelector("#inputEmailReg").value == "" || document.querySelector("#inputOMReg").value == "" || document.querySelector("#inputNameReg").value == "" || document.querySelector("#inputClassReg").value == "") {
+        throw "Minden mezőt ki kell tölteni!";
+    }
+
+    if (document.querySelector("#inputOMReg").value.length != 7) {
+        throw "Az OM azonosító hossza 7 karakter kell, hogy legyen!";
+    }
+
+    if (document.querySelector("#inputOMReg").value.replaceAll(/[A-ZÍÉŐÚŰÁÓÜÖ]/gi, "").length != document.querySelector("#inputOMReg").value.length) {
+        throw "Az OM azonosító csak számokból állhat!";
+    }
+}
+
+function writeUserData(userId, name, email, sClass, teacher) {
+    if (teacher) {
+        database.ref('teachers/' + userId).set({
+            name: name,
+            email: email,
+            class: sClass
+        });
+    } else {
+        database.ref('students/' + userId).set({
+            name: name,
+            email: email,
+            class: sClass,
+            task1: 0,
+            task2: 0,
+            task3: 0,
+            task4: 0,
+            task5: 0,
+            task6: 0,
+            badge1: false,
+            badge2: false,
+            badge3: false
+        });
+    }
 }

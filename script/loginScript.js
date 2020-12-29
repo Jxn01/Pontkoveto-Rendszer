@@ -24,6 +24,8 @@ function init() {
     $("toRegPageButton").addEventListener("click", backToRegPage);
     $("diakButton").addEventListener("click", toDiakPage);
     $("tanarButton").addEventListener("click", toTanarPage);
+    $("logoutButtonStudent").addEventListener("click", logout);
+    $("logoutButtonTeacher").addEventListener("click", logout);
 }
 
 function login(event) {
@@ -33,9 +35,11 @@ function login(event) {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
             if (document.querySelector("#inputTeacherLogin").checked) {
-                location.href = "teacher.html"
+                $("loginDiv").style.visibility = "hidden";
+                $("teacherDiv").style.visibility = "visible";
             } else {
-                location.href = "student.html"
+                $("loginDiv").style.visibility = "hidden";
+                $("studentDiv").style.visibility = "visible";
             }
         }).catch((error) => {
             var errorCode = error.code;
@@ -51,10 +55,10 @@ function login(event) {
                     break;
 
                 case "auth/wrong-password":
-                    $("failedLogin").innerHTML = "A jelszó helytelen.";
+                    $("failedLogin").innerHTML = "Az OM azonosító helytelen.";
                     break;
             }
-            setTimeout(function(){ $("failedLogin").style.visibility = "hidden"; }, 4000);
+            setTimeout(function () { $("failedLogin").style.visibility = "hidden"; }, 4000);
 
         });
 }
@@ -64,9 +68,27 @@ function backToRegPage() {
 }
 
 function toDiakPage() {
-    location.href = "student.html"
+    $("loginDiv").style.visibility = "hidden";
+    $("studentDiv").style.visibility = "visible";
+    $("teacherDiv").style.visibility = "hidden";
 }
 
 function toTanarPage() {
-    location.href = "teacher.html"
+    $("loginDiv").style.visibility = "hidden";
+    $("studentDiv").style.visibility = "hidden";
+    $("teacherDiv").style.visibility = "visible";
 }
+
+function logout() {
+    firebase.auth().signOut().then(function () {
+        $("loginDiv").style.visibility = "visible";
+        $("studentDiv").style.visibility = "hidden";
+        $("teacherDiv").style.visibility = "hidden";
+    }).catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        $("failedLogout").innerHTML = errorMessage;
+        $("failedLogout").style.visibility = "visible";
+        setTimeout(function () { $("failedLogout").style.visibility = "hidden"; }, 4000);
+    });
+} 
