@@ -10,7 +10,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-var database = firebase.database();
+var database = firebase.firestore();
 
 window.addEventListener("load", init);
 
@@ -40,7 +40,7 @@ function registration(event) {
             .then((user) => {
                 var userID = firebase.auth().currentUser.uid;
                 writeUserData(userID, name, email, sClass, teacher);
-                //location.href = "index.html";
+                setTimeout(function () { location.href = "index.html"; }, 2000);
             })
             .catch((error) => {
                 var errorCode = error.code;
@@ -62,9 +62,9 @@ function registration(event) {
                 setTimeout(function () { $("failedReg").style.visibility = "hidden"; }, 4000);
             });
 
-    } catch (e) {
+    } catch (error) {
         $("failedReg").style.visibility = "visible";
-        $("failedReg").innerHTML = e;
+        $("failedReg").innerHTML = error;
         setTimeout(function () { $("failedReg").style.visibility = "hidden"; }, 4000);
     }
 }
@@ -89,13 +89,13 @@ function validation() {
 
 function writeUserData(userId, name, email, sClass, teacher) {
     if (teacher) {
-        database.ref('teachers/' + userId).set({
+        database.collection("teachers").doc(userId).set({
             name: name,
             email: email,
             class: sClass
         });
     } else {
-        database.ref('students/' + userId).set({
+        database.collection("students").doc(userId).set({
             name: name,
             email: email,
             class: sClass,
