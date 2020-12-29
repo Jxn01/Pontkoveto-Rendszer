@@ -44,25 +44,32 @@
                     <form id="login">
                         <div class="form-group">
                             <label for="inputEmailLogin">E-mail cím</label>
-                            <input type="email" class="form-control" id="inputEmailLogin" name="inputEmailLogin"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="inputEmailLogin" name="inputEmailLogin">
                             <small id="emailHelp" class="form-text text-muted">E-mail címedet biztonságosan
                                 kezeljük.</small>
                         </div>
+
                         <div class="form-group">
                             <label for="inputOMLogin">OM azonosító</label>
                             <input type="password" class="form-control" id="inputOMLogin" name="inputOMLogin">
+                            <small id="loginOmHelp" class="form-text text-muted">Egy 7 számjegyből álló jel.</small>
                         </div>
+
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="inputTeacherLogin"
                                 name="inputTeacherLogin">
                             <label class="form-check-label" for="inputTeacherLogin">Tanár</label>
+                            <small id="loginTeacherHelp" class="form-text text-muted">A tanári felületbe való bejelentkezéshez.</small>
                         </div>
+
                         <button type="submit" class="btn btn-primary" id="loginButton"
                             name="loginButton">Bejelentkezés</button>
+
                         <button type="button" class="btn btn-primary" id="toRegPageButton"
                             name="toRegPageButton">Regisztráció</button>
+
                         <button type="button" class="btn btn-primary" id="diakButton" name="diakButton">Diák</button>
+
                         <button type="button" class="btn btn-primary" id="tanarButton" name="tanarButton">Tanár</button>
                     </form>
                 </div>
@@ -273,7 +280,7 @@
         <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
         <!-- Firebase + JS -->
         <script src="script/loginScript.js"></script>

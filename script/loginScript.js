@@ -10,7 +10,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-var database = firebase.database();
+var database = firebase.firestore();
 
 window.addEventListener("load", init);
 
@@ -34,6 +34,8 @@ function login(event) {
     var password = document.querySelector("#inputOMLogin").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
+            document.querySelector("#inputEmailLogin").value = "";
+            document.querySelector("#inputOMLogin").value = "";
             if (document.querySelector("#inputTeacherLogin").checked) {
                 $("loginDiv").style.visibility = "hidden";
                 $("teacherDiv").style.visibility = "visible";

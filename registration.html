@@ -35,25 +35,27 @@
                 <form id="registration">
                     <div class="form-group">
                         <label for="inputNameReg">Teljes név</label>
-                        <input type="text" class="form-control" id="inputNameReg" name="inputNameReg" aria-describedby="nameHelp">
+                        <input type="text" class="form-control" id="inputNameReg" name="inputNameReg">
                     </div>
                     <div class="form-group">
                         <label for="inputEmailReg">E-mail cím</label>
-                        <input type="email" class="form-control" id="inputEmailReg" name="inputEmailReg" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="inputEmailReg" name="inputEmailReg">
+                        <small id="emailHelp" class="form-text text-muted">Formátum: példa@kiszolgáló.hu</small>
                     </div>
                     <div class="form-group">
                         <label for="inputClassReg">Osztály</label>
-                        <input type="text" class="form-control" id="inputClassReg" name="inputClassReg" aria-describedby="classHelp">
+                        <input type="text" class="form-control" id="inputClassReg" name="inputClassReg">
+                        <small id="classHelp" class="form-text text-muted">Példa: 12/D</small>
                     </div>
                     <div class="form-group">
                         <label for="inputOMReg">OM azonosító</label>
                         <input type="password" class="form-control" id="inputOMReg" name="inputOMReg">
+                        <small id="omHelp" class="form-text text-muted">Egy 7 számjegyből álló jel.</small>
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="inputTeacherReg" name="inputTeacherReg">
                         <label class="form-check-label" for="inputTeacherReg">Tanár</label>
-                        <small id="teacherHelp" class="form-text text-muted">Csak akkor pipáld be, ha tanár
-                            vagy!</small>
+                        <small id="teacherHelp" class="form-text text-muted">A tanári felületbe való regisztráláshoz.</small>
                     </div>
                     <button type="submit" class="btn btn-primary" id="regButton" name="regButton">Regisztráció</button>
                     <button type="button" class="btn btn-primary" id="backToLoginButton" name="backToLoginButton">Vissza a
@@ -79,8 +81,7 @@
     <!--  Firebase libraries : https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
     <!-- Firebase + JS -->
     <script src="script/regScript.js"></script>
