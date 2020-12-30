@@ -92,10 +92,10 @@
                             aria-haspopup="true" aria-expanded="false">
                             Profil
                         </button>
-                        <div class="dropdown-menu">
-                            <p class="dropdown-item">E-mail cím: </p>
-                            <p class="dropdown-item">Osztály: </p>
-                            <p class="dropdown-item">Beosztott tanulók száma: </p>
+                        <div class="dropdown-menu" id="dropdownTanar">
+                            <p class="dropdown-item" id="emailTanar">E-mail cím: </p>
+                            <p class="dropdown-item" id="osztalyTanar">Osztály: </p>
+                            <p class="dropdown-item" id="tanuloDbTanar">Beosztott tanulók száma: </p>
                             <div class="dropdown-divider"></div>
                             <button type="button" class="dropdown-item" id="logoutButtonTeacher"
                                 name="logoutButtonTeacher">Kijelentkezés</button>
@@ -116,8 +116,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="jumbotron">
-                        <h1 class="display-4">Kedves tanár úr/tanárnő!</h1>
-                        <p class="lead">Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja
+                        <h1 class="display-4" id="taskName2">Kedves tanár úr/tanárnő!</h1>
+                        <p class="lead" id="taskDesc2">Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja
                             követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve,
                             hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge
                             gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz
@@ -130,14 +130,14 @@
                                 Feladatok
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">1. feladat</button>
-                                <button class="dropdown-item" type="button">2. feladat</button>
-                                <button class="dropdown-item" type="button">3. feladat</button>
-                                <button class="dropdown-item" type="button">4. feladat</button>
-                                <button class="dropdown-item" type="button">5. feladat</button>
-                                <button class="dropdown-item" type="button">6. feladat</button>
+                                <button class="dropdown-item" type="button" id="task1Button2">1. feladat</button>
+                                <button class="dropdown-item" type="button" id="task2Button2">2. feladat</button>
+                                <button class="dropdown-item" type="button" id="task3Button2">3. feladat</button>
+                                <button class="dropdown-item" type="button" id="task4Button2">4. feladat</button>
+                                <button class="dropdown-item" type="button" id="task5Button2">5. feladat</button>
+                                <button class="dropdown-item" type="button" id="task6Button2">6. feladat</button>
                                 <div class="dropdown-divider"></div>
-                                <button class="dropdown-item" type="button">Üdvözlés</button>
+                                <button class="dropdown-item" type="button" id="homeButton2">Üdvözlés</button>
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
         <div class="container" id="navbar-student">
             <div class="row">
                 <div class="col-4">
-                    <h3>Tanuló neve</h3>
+                    <h3 id="student-name">Tanuló neve</h3>
                 </div>
                 <div class="col-2">
                     <img src="images/bronze.jpg" class="badges" id="bronze" />
@@ -204,11 +204,11 @@
                             aria-haspopup="true" aria-expanded="false">
                             Profil
                         </button>
-                        <div class="dropdown-menu">
-                            <p class="dropdown-item">E-mail cím: </p>
-                            <p class="dropdown-item">Osztály: </p>
-                            <p class="dropdown-item">Kész feladatok száma: </p>
-                            <p class="dropdown-item">Megszerzett badge-ek száma: </p>
+                        <div class="dropdown-menu" id="dropdownDiak">
+                            <p class="dropdown-item" id="emailDiak">E-mail cím: </p>
+                            <p class="dropdown-item" id="osztalyDiak">Osztály: </p>
+                            <p class="dropdown-item" id="keszDbDiak">Kész feladatok száma: </p>
+                            <p class="dropdown-item" id="badgeDbDiak">Megszerzett badge-ek száma: </p>
                             <div class="dropdown-divider"></div>
                             <button type="button" class="dropdown-item" id="logoutButtonStudent"
                                 name="logoutButtonStudent">Kijelentkezés</button>
@@ -283,7 +283,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="timerDiv">
             <div class="row">
                 <div class="col-12">
                     <h5 class="center">A feladat megoldásához rendelkezésre álló idő</h5>
@@ -307,7 +307,7 @@
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="overflow-auto margin-bottom" style="height: 30vh; width: 70vw">
-                        <ul class="list-group">
+                        <ul class="list-group" id="leaderboard">
                             <li class="list-group-item">Cras justo odio</li>
                             <li class="list-group-item">Dapibus ac facilisis in</li>
                             <li class="list-group-item">Morbi leo risus</li>
@@ -353,8 +353,14 @@
         <!-- Task Explorer -->
         <script src="script/explorer.js"></script>
 
+        <!-- Leaderboard -->
+        <script src="script/leaderboard.js"></script>
+
+        <!-- Profil -->
+        <script src="script/profil.js"></script>
+
     </div>
 
 </body>
 
-</html
+</html>

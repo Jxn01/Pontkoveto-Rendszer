@@ -80,12 +80,7 @@ function login(event) {
                 database.collection("teachers").doc(UID)
                     .withConverter(teacherConverter)
                     .get().then(function (doc) {
-                        if (doc.exists) {
-                            // Convert to Teacher object
-                            var teacher = doc.data();
-                            // Use a Teacher instance method
-                            console.log(teacher.toString());
-                        } else {
+                        if (!doc.exists) {
                             console.log("No such document!");
                             throw "Rossz fióktípus!";
                         }
@@ -108,12 +103,7 @@ function login(event) {
                 database.collection("students").doc(UID)
                     .withConverter(studentConverter)
                     .get().then(function (doc) {
-                        if (doc.exists) {
-                            // Convert to Student object
-                            var student = doc.data();
-                            // Use a Student instance method
-                            console.log(student.toString());
-                        } else {
+                        if (!doc.exists) {
                             console.log("No such document!");
                             throw "Rossz fióktípus!";
                         }
@@ -186,6 +176,8 @@ function logout() {
 }
 
 function loggedIn(teacher, UID) {
+    var teacherData = "";
+    var studentData = "";
     if (teacher) {
         $("loginDiv").style.visibility = "hidden";
         $("teacherDiv").style.visibility = "visible";
@@ -195,16 +187,14 @@ function loggedIn(teacher, UID) {
             .withConverter(studentConverter)
             .get().then(function (doc) {
                 if (doc.exists) {
-                    // Convert to Teacher object
-                    var teacher = doc.data();
-                    // Use a Teacher instance method
-                    console.log(teacher.toString());
+                    teacherData = doc.data();
                 } else {
                     console.log("No such document!");
                 }
             }).catch(function (error) {
                 console.log("Error getting document:", error);
             });
+            $("teacher-name").innerHTML = teacherData.tName; 
 
     } else {
         $("loginDiv").style.visibility = "hidden";
@@ -215,17 +205,18 @@ function loggedIn(teacher, UID) {
             .withConverter(studentConverter)
             .get().then(function (doc) {
                 if (doc.exists) {
-                    // Convert to Student object
-                    var student = doc.data();
-                    // Use a Student instance method
-                    console.log(student.toString());
+                    studentData = doc.data();
                 } else {
                     console.log("No such document!");
                 }
             }).catch(function (error) {
                 console.log("Error getting document:", error);
-            });
+            });     
+            $("student-name").innerHTML = studentData.sName;  
+            console.log(studentData);
+            console.log(studentData.toString());
     }
+    
 }
 
 class Student {
