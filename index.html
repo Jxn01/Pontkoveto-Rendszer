@@ -243,8 +243,8 @@
         <div class="container">
             <div id="quest">
                 <div class="jumbotron">
-                    <h1 class="display-4">Kedves tanuló!</h1>
-                    <p class="lead">Ezen a felületen a feladataidat tudod teljesíteni, minden feladatért
+                    <h1 class="display-4" id="taskName">Kedves tanuló!</h1>
+                    <p class="lead" id="taskDesc">Ezen a felületen a feladataidat tudod teljesíteni, minden feladatért
                         meghatározott
                         mennyiségű pont jár, amit a feladatoknál láthatsz. Ezen felül az összes pontszámodat a
                         profilodban, az összesített teljesítményt fentebb, az adott feladathoz tartozó időt majd
@@ -262,14 +262,14 @@
                                         Feladatok
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <button class="dropdown-item" type="button">1. feladat</button>
-                                        <button class="dropdown-item" type="button">2. feladat</button>
-                                        <button class="dropdown-item" type="button">3. feladat</button>
-                                        <button class="dropdown-item" type="button">4. feladat</button>
-                                        <button class="dropdown-item" type="button">5. feladat</button>
-                                        <button class="dropdown-item" type="button">6. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task1Button">1. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task2Button">2. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task3Button">3. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task4Button">4. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task5Button">5. feladat</button>
+                                        <button class="dropdown-item" type="button" id="task6Button">6. feladat</button>
                                         <div class="dropdown-divider"></div>
-                                        <button class="dropdown-item" type="button">Üdvözlés</button>
+                                        <button class="dropdown-item" type="button" id="homeButton">Üdvözlés</button>
                                     </div>
                                 </div>
                             </div>
@@ -349,6 +349,9 @@
 
         <!-- Timer -->
         <script src="script/timerScript.js"></script>
+
+        <!-- Task Explorer -->
+        <script src="script/explorer.js"></script>
 
     </div>
 
