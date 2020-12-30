@@ -163,9 +163,11 @@ function toTanarPage() {
 
 function logout() {
     firebase.auth().signOut().then(function () {
-        $("loginDiv").style.visibility = "visible";
-        $("studentDiv").style.visibility = "hidden";
+        $("timerDiv").style.visibility = "hidden";
+        $("taskDoneButton").style.visibility = "hidden";
         $("teacherDiv").style.visibility = "hidden";
+        $("studentDiv").style.visibility = "hidden";
+        $("loginDiv").style.visibility = "visible";
     }).catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
