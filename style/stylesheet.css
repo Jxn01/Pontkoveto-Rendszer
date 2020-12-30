@@ -32,6 +32,11 @@ body {
     margin-top: 10px;
 }
 
+.navbar-teacher{
+    margin-top: 10px;
+}
+
+
 #failedLogout {
     visibility: hidden;
     margin-top: 10px;
