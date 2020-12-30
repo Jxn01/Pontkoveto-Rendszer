@@ -2,10 +2,10 @@ function $(id){
     return document.getElementById(id);
 }
 
-var myVar = setInterval(myTimer, 1000);
-var baseSeconds = -1;
-var baseMinutes = 0;
-var baseHours = 0;
+var timeLeft = setInterval(myTimer, 1000);
+var baseSeconds = 0;
+var baseMinutes = 0; //órák+1
+var baseHours = 0; //percek+1
 var baseDays = 10;
 
 function myTimer() {
@@ -15,17 +15,23 @@ function myTimer() {
     }
     if(baseMinutes <= 0){
         baseHours -= 1;
-        baseMinutes = 59;
+        baseMinutes = 60;
     }
     if(baseHours <= 0){
         baseDays -= 1;
-        baseHours = 23;
+        baseHours = 24;
+    }
+    if(baseDays<0){
+        clearInterval(timeLeft);
+        setTimeout(function () {
+            $("timer").innerHTML = "Lejárt az idő balfasz";
+        }, 10);
     }
     
     baseSeconds = baseSeconds-1;
     seconds = pad(baseSeconds,2);
-    minutes = pad(baseMinutes,2);
-    hours = pad(baseHours,2);
+    minutes = pad(baseMinutes-1,2);
+    hours = pad(baseHours-1,2);
     days = pad(baseDays,2);
     $("timer").innerHTML = days+":"+hours+":"+minutes+":"+seconds;
 }
