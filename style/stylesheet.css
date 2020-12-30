@@ -33,11 +33,11 @@ body {
     visibility: hidden;
 }
 
-#upper {
+#timer {
     text-align: center;
     color: rgb(66, 66, 66);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 10vw;
+    font-size: 4vw;
 }
 
 .transparent {
@@ -54,25 +54,13 @@ body {
     color: white;
 }
 
-.carousel-item {
-    transition: none;
-}
 
-#textkozep {
-    text-align: center;
-}
-
-.kozep {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 #submit {
     background-color: dimgray;
 }
 
-#gombnak {
+#task_done {
     padding-top: 3vh;
     text-align: center;
     padding-bottom: 3vh;
@@ -105,4 +93,8 @@ body {
 
 .badge{
     width: 3vh
+}
+
+.menu{
+    margin-top: 5px;
 }

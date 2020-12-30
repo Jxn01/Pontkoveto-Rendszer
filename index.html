@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style/loginStylesheet.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
 
     <link
         href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG2c3/xpoOP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoq2P/QO+T/0X8nf9D95n/M854/x6AR/8deEP/M895/0P3mf9F/J3/P+6T/yamX/8AAAAAAAAAAAAAAAA74In/QfGU/0Hwk/887o7/NtiA/zzXhP8zv3L/JZhX/z3diP8213//PO6O/0Hwk/9B8ZT/OdyG/wAAAAAAAAAAQ/eZ/0L0lv8z0Hn/OuCG/0P3mf8AAAAAN8t7/ymjX/8AAAAAQ/eZ/zrghf8z0Hn/QvSW/0P3mf8PSSkBAAAAADznjP9A75L/PuuP/0Hxk/8zzHn/AAAAADXDdf8cfkb/AAAAADTOe/9A8ZP/PuuO/z/ukv8854z/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8eYP8PHmD/Dx5e/w8eXv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPHmbJESN9/xo3zP8eQO7/HkDw/x9B9v8fQPL/GDK5/w8eZf8PHl+FAAAAAAAAAAAAAAAAAAAAAAAAAAAPIHD/Hj/r/x5A9P8fmK//Iauy/yKwt/8hqLD/H6Cp/xyAq/8fQvr/Ey2d/w8eXv8AAAAAAAAAAAAAAAAJEkECH0Hz/x4/6/8mxMv/MPP0/zD5+v8v/f7/L/7//zD6/P8t6+z/IK20/x9B9f8TK5r/AAAAAAAAAAAAAAAAHDvi/x9A8v8q2dz/Mfj5/7Onp//MzMz/2dnZ/9TU1P+9vb3/nJSU/zD5+v8lwMj/HT7s/w8faf8AAAAAAAAAAB5A8v8aNs7/MPX2/yna3v/v7+//AgMG//r6+v/39/f/AgUJ/9jY2P8u6Or/L/f4/x4/7v8WL7L/AAAAAAAAAAAeQPP/FzK+/y/4+f8lxMr/+Pj4/1Bic//7+/v/+vr6/1JjdP/19fX/K+Hj/zD6+v8eP/D/FzTC/wAAAAAAAAAAHkDz/Rs63f8w/f7/Kdzf/+ns7P/Mzc///v7+//7+/v/Jycv/rdHT/zDy9P8w+/3/H0L6/xUvr9IAAAAAAAAAAAAAAAAfQvv/Eyys/zD7/P8r4eT/H6qx/x6jq/8epq//IK61/yzl5/8w+vr/Gzra/xw96f8AAAAAAAAAAAAAAAAAAAAAAAAAAB5B/f8bO+H/EySZ/y/6/P8w+vr/MPv7/zD8/f8SJ5z/HD3l/x5B9f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5B+/8fQv7/H0L8/x9C/f8fQv7/H0L+/wAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAMADAACAAQAAgkEAAIJBAAD8PwAA4AcAAMADAADAAwAAgAEAAIABAACAAQAAgAEAAMADAADgBwAA+B8AAA=="
         rel="icon" type="image/x-icon" />
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <title>Pontkövető rendszer</title>
 </head>
@@ -59,7 +57,8 @@
                             <input type="checkbox" class="form-check-input" id="inputTeacherLogin"
                                 name="inputTeacherLogin">
                             <label class="form-check-label" for="inputTeacherLogin">Tanár</label>
-                            <small id="loginTeacherHelp" class="form-text text-muted">A tanári felületbe való bejelentkezéshez.</small>
+                            <small id="loginTeacherHelp" class="form-text text-muted">A tanári felületbe való
+                                bejelentkezéshez.</small>
                         </div>
 
                         <button type="submit" class="btn btn-primary" id="loginButton"
@@ -80,14 +79,68 @@
     <div id="teacherDiv">
         <div class="container navbar-margin">
             <div class="row">
-                <div class="col-10">
-                    <h1>Tanár név</h1>
+                <div class="col-3">
+                    <h2>Tanár név</h2>
                 </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-primary" id="logoutButtonTeacher">Kijelentkezés</button>
+                <div class="col-6">
+                    <h1 class="d-flex justify-content-center">Pontkövető-rendszer</h1>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-1">
+                    <div class="btn-group dropleft d-flex justify-content-end menu">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </button>
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">E-mail cím: </p>
+                            <p class="dropdown-item">Osztály: </p>
+                            <p class="dropdown-item">Beosztott tanulók száma: </p>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" class="dropdown-item" id="logoutButtonTeacher"
+                                name="logoutButtonTeacher">Kijelentkezés</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h1 class="d-flex justify-content-center">Tanári felület</h1>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Kedves tanár úr/tanárnő!</h1>
+                        <p class="lead">Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve, hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz tartozó információkat a lentebb található feladatok menü alatt találhatja.</p>
+                        <hr class="my-4">
+                        <p>Hatékony munkát kíván a Soluzioni Italiane csapata!</p>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Feladatok
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">1. feladat</button>
+                                <button class="dropdown-item" type="button">2. feladat</button>
+                                <button class="dropdown-item" type="button">3. feladat</button>
+                                <button class="dropdown-item" type="button">4. feladat</button>
+                                <button class="dropdown-item" type="button">5. feladat</button>
+                                <button class="dropdown-item" type="button">6. feladat</button>
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item" type="button">Üdvözlés</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-3"></div>
@@ -96,23 +149,31 @@
                 </div>
                 <div class="col-3"></div>
             </div>
-
         </div>
 
-        <div class="container d-flex justify-content-center">
-            <div class="overflow-auto" style="height: 30vh; width: 70vw;">
-                <ul class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="d-flex justify-content-center">Az osztályához tartozó tanulók eredményei</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="overflow-auto" style="height: 30vh; width: 70vw;">
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -120,146 +181,126 @@
     <div id="studentDiv">
         <div class="container navbar-margin">
             <div class="row">
-                <div class="col-2">
-                    <img src="images/bronze.jpg" alt="bronze" class="kozep badge" id="bronze" />
-                </div>
-                <div class="col-2">
-                    <img src="images/silver.jpg" alt="silver" class="kozep badge" id="silver" />
-                </div>
-                <div class="col-2">
-                    <img src="images/gold.jpg" alt="gold" class="kozep badge" id="gold" />
-                </div>
                 <div class="col-5">
-                    <h2 id="textkozep">Tanuló neve</h2>
+                    <h2>Tanuló neve</h2>
+                </div>
+                <div class="col-2">
+                    <img src="images/bronze.jpg" alt="bronze" class="badge" id="bronze" />
+                </div>
+                <div class="col-2">
+                    <img src="images/silver.jpg" alt="silver" class="badge" id="silver" />
+                </div>
+                <div class="col-2">
+                    <img src="images/gold.jpg" alt="gold" class="badge" id="gold" />
                 </div>
                 <div class="col-1">
-                    <button type="button" class="btn btn-primary" id="logoutButtonStudent"
-                        name="logoutButtonStudent">Kijelentkezés</button>
+                    <div class="btn-group dropleft d-flex justify-content-end menu">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Profil
+                        </button>
+                        <div class="dropdown-menu">
+                            <p class="dropdown-item">E-mail cím: </p>
+                            <p class="dropdown-item">Osztály: </p>
+                            <p class="dropdown-item">Kész feladatok száma: </p>
+                            <p class="dropdown-item">Megszerzett badge-ek száma: </p>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" class="dropdown-item" id="logoutButtonStudent"
+                                name="logoutButtonStudent">Kijelentkezés</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="d-flex justify-content-center">Teljesítmény</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="quest">
+                <div class="jumbotron">
+                    <h1 class="display-4">Kedves tanuló!</h1>
+                    <p class="lead">Ezen a felületen a feladataidat tudod teljesíteni, minden feladatért
+                        meghatározott
+                        mennyiségű pont jár, amit a feladatoknál láthatsz. Ezen felül az összes pontszámodat a
+                        profilodban, az összesített teljesítményt fentebb, az adott feladathoz tartozó időt majd
+                        lentebb
+                        láthatod. Ha kiemelkedően jól teljesítesz, a tanárod elérhetőve tehet számodra bizonyos
+                        badge-eket, ezeket fentebb láthatod majd.</p>
+                    <hr class="my-4">
+                    <p>Itt találhatod a feladatokat, sok szerencsét kíván a Soluzioni Italiane csapata!</p>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Feladatok
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">1. feladat</button>
+                            <button class="dropdown-item" type="button">2. feladat</button>
+                            <button class="dropdown-item" type="button">3. feladat</button>
+                            <button class="dropdown-item" type="button">4. feladat</button>
+                            <button class="dropdown-item" type="button">5. feladat</button>
+                            <button class="dropdown-item" type="button">6. feladat</button>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" type="button">Üdvözlés</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="upper">00:00:00:00</div>
+        <div id="timer">00:00:00:00</div>
 
         <div class="container">
-            <div id="quest">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Első küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Kettő küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Harmadik küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Negyedik küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Ötödik küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/caback.png" class="d-block" alt="" width="100%" height="200vh" />
-                            <div class="carousel-caption">
-                                <h3>Hatodik küldetés</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div id="task_done">
+                        <a href="#" class="btn btn-block btn-lg" id="submit">Feladat kész</a>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="d-flex justify-content-center">Az osztályodban lévő többi tanuló eredményei</h3>
                 </div>
             </div>
-
-            <div id="gombnak">
-                <a href="#" class="btn btn-block btn-lg" id="submit">Küldetés kész</a>
-            </div>
-
-            <div class="container d-flex justify-content-center">
-                <div class="overflow-auto margin-bottom" style="height: 30vh; width: 70vw">
-                    <ul class="list-group">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
+            <div class="row">
+                <div class="col-12">
+                    <div class="overflow-auto margin-bottom" style="height: 30vh; width: 70vw">
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -270,8 +311,8 @@
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
 
         <!-- Firebase js import -->
