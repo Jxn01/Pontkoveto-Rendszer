@@ -2,35 +2,23 @@ body {
     display: grid;
 }
 
-#loginDiv, #studentDiv, #teacherDiv{
+#loginDiv, #studentDiv, #teacherDiv {
     grid-column: 1;
     grid-row: 1;
 }
 
-#loginJumbotron{
+#loginJumbotron {
     background-color: white;
 }
 
-#failedReg{
+#failedReg {
     visibility: hidden;
     margin-top: 10px;
 }
 
-#failedLogin{
+#failedLogin {
     visibility: hidden;
     margin-top: 10px;
-}
-
-#loginDiv{
-    visibility: visible;
-}
-
-#teacherDiv{
-    visibility: hidden;
-}
-
-#studentDiv{
-    visibility: hidden;
 }
 
 #timer {
@@ -40,61 +28,55 @@ body {
     font-size: 4vw;
 }
 
-.transparent {
-    background-color: transparent;
-}
-
-.btn1 {
-    color: white;
-    border-color: #FFC859;
-    border-radius: 100%;
-}
-
-.nav-link {
-    color: white;
-}
-
-
-
-#submit {
-    background-color: dimgray;
-}
-
-#task_done {
-    padding-top: 3vh;
-    text-align: center;
-    padding-bottom: 3vh;
-}
-
-.navbar-margin {
+.navbar-student {
     margin-top: 10px;
 }
 
-#failedLogout{
+#failedLogout {
     visibility: hidden;
     margin-top: 10px;
 }
 
-.margin-bottom{
+.margin-bottom {
     margin-bottom: 50px;
 }
 
-#bronze{
-    visibility: hidden;
+.badges {
+    width: 3vh;
 }
 
-#silver{
-    visibility: hidden;
-}
-
-#gold{
-    visibility: hidden;
-}
-
-.badge{
-    width: 3vh
-}
-
-.menu{
+.menu {
     margin-top: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+#taskDoneButton {
+    visibility: hidden;
+}
+
+#loginDiv {
+    visibility: visible;
+}
+
+#teacherDiv {
+    visibility: hidden;
+}
+
+#studentDiv {
+    visibility: hidden;
+}
+
+#gold {
+    visibility: hidden;
+}
+
+#silver {
+    visibility: hidden;
+}
+
+#bronze {
+    visibility: hidden;
 }

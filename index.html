@@ -117,11 +117,15 @@
                 <div class="col-12">
                     <div class="jumbotron">
                         <h1 class="display-4">Kedves tanár úr/tanárnő!</h1>
-                        <p class="lead">Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve, hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz tartozó információkat a lentebb található feladatok menü alatt találhatja.</p>
+                        <p class="lead">Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja
+                            követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve,
+                            hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge
+                            gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz
+                            tartozó információkat a lentebb található feladatok menü alatt találhatja.</p>
                         <hr class="my-4">
                         <p>Hatékony munkát kíván a Soluzioni Italiane csapata!</p>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Feladatok
                             </button>
@@ -158,7 +162,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     <div class="overflow-auto" style="height: 30vh; width: 70vw;">
                         <ul class="list-group">
                             <li class="list-group-item">Cras justo odio</li>
@@ -179,20 +183,21 @@
     </div>
 
     <div id="studentDiv">
-        <div class="container navbar-margin">
+        <div class="container" id="navbar-student">
             <div class="row">
-                <div class="col-5">
-                    <h2>Tanuló neve</h2>
+                <div class="col-4">
+                    <h3>Tanuló neve</h3>
                 </div>
                 <div class="col-2">
-                    <img src="images/bronze.jpg" alt="bronze" class="badge" id="bronze" />
+                    <img src="images/bronze.jpg" class="badges" id="bronze" />
                 </div>
                 <div class="col-2">
-                    <img src="images/silver.jpg" alt="silver" class="badge" id="silver" />
+                    <img src="images/silver.jpg" class="badges" id="silver" />
                 </div>
                 <div class="col-2">
-                    <img src="images/gold.jpg" alt="gold" class="badge" id="gold" />
+                    <img src="images/gold.jpg" class="badges" id="gold" />
                 </div>
+                <div class="col-1"></div>
                 <div class="col-1">
                     <div class="btn-group dropleft d-flex justify-content-end menu">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
@@ -209,6 +214,11 @@
                                 name="logoutButtonStudent">Kijelentkezés</button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="d-flex justify-content-center">Pontkövető-rendszer: Tanulói felület</h1>
                 </div>
             </div>
         </div>
@@ -243,40 +253,51 @@
                         badge-eket, ezeket fentebb láthatod majd.</p>
                     <hr class="my-4">
                     <p>Itt találhatod a feladatokat, sok szerencsét kíván a Soluzioni Italiane csapata!</p>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Feladatok
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">1. feladat</button>
-                            <button class="dropdown-item" type="button">2. feladat</button>
-                            <button class="dropdown-item" type="button">3. feladat</button>
-                            <button class="dropdown-item" type="button">4. feladat</button>
-                            <button class="dropdown-item" type="button">5. feladat</button>
-                            <button class="dropdown-item" type="button">6. feladat</button>
-                            <div class="dropdown-divider"></div>
-                            <button class="dropdown-item" type="button">Üdvözlés</button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Feladatok
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <button class="dropdown-item" type="button">1. feladat</button>
+                                        <button class="dropdown-item" type="button">2. feladat</button>
+                                        <button class="dropdown-item" type="button">3. feladat</button>
+                                        <button class="dropdown-item" type="button">4. feladat</button>
+                                        <button class="dropdown-item" type="button">5. feladat</button>
+                                        <button class="dropdown-item" type="button">6. feladat</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button">Üdvözlés</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-9 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary" id="taskDoneButton">Feladat megjelölése készként</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="timer">00:00:00:00</div>
-
         <div class="container">
             <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <div id="task_done">
-                        <a href="#" class="btn btn-block btn-lg" id="submit">Feladat kész</a>
-                    </div>
+                <div class="col-12">
+                    <h5 class="center">A feladat megoldásához rendelkezésre álló idő</h5>
                 </div>
-                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="timer">00:00:00:00</div>
+                </div>
             </div>
         </div>
+
         <hr class="my-4">
+
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -284,7 +305,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     <div class="overflow-auto margin-bottom" style="height: 30vh; width: 70vw">
                         <ul class="list-group">
                             <li class="list-group-item">Cras justo odio</li>
