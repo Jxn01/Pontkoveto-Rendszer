@@ -198,6 +198,8 @@ function logout() {
         $("taskName2").innerHTML = "Kedves tanár úr/tanárnő!";
         $("taskDesc2").innerHTML = "Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve, hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz tartozó információkat a lentebb található feladatok menü alatt találhatja.";
         $("taskDescSmall2").innerHTML = "";
+        $("leaderboardTeacher").innerHTML = "";
+        $("leaderboard").innerHTML = "";
     }).catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -247,6 +249,7 @@ function loggedIn(teacher, UID) {
 }
 
 function classSpecificStudentConstructor(studentData) {
+    $("leaderboard").innerHTML = "";
     database.collection("students").where("class", "==", studentData.class).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             student = new Student(doc.data().badge1, doc.data().badge2, doc.data().badge3, doc.data().class, doc.data().email, doc.data().name, doc.data().task1, doc.data().task2, doc.data().task3, doc.data().task4, doc.data().task5, doc.data().task6, doc.data().teacher);
@@ -256,6 +259,8 @@ function classSpecificStudentConstructor(studentData) {
 }
 
 function classSpecificStudentConstructorForTeacher(teacherData) {
+    studentCount = 0;
+    $("leaderboardTeacher").innerHTML = "";
     let student;
     database.collection("students").where("class", "==", teacherData.class).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
@@ -264,7 +269,7 @@ function classSpecificStudentConstructorForTeacher(teacherData) {
             studentCount++;
         });
     });
-    setTimeout(function () { $("tanuloDbTanar").innerHTML += studentCount; }, 1000);
+    setTimeout(function () { $("tanuloDbTanar").innerHTML = "Beosztott tanulók száma: "+ studentCount; }, 1000);
 }
 
 class Student {

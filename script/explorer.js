@@ -32,7 +32,7 @@ function taskHandler(taskId) {
             break;
         case 1:
             $("taskName").innerHTML = "Első feladat";
-            $("taskDesc").innerHTML = "Curabitur vitae aliquam velit. Etiam rhoncus ac nibh aliquam mattis. Phasellus sem nisl, consequat vel porta id, rhoncus quis justo. Nunc id est eget mauris interdum aliquet in sit amet libero. Cras hendrerit turpis ex, ut sodales risus consectetur in. In dapibus fringilla gravida. Donec eu varius nisi, a luctus justo. Proin eu enim in massa tempor suscipit ut in est. Curabitur laoreet turpis convallis, volutpat erat venenatis, pellentesque turpis. Integer est dolor, ullamcorper vel tempus et, auctor nec mi. Duis porta rhoncus euismod. Vivamus nisl nisi, sodales non ullamcorper sit amet, maximus id lorem. Nullam quis sollicitudin est.";
+            $("taskDesc").innerHTML = "Egy 6 g tömegű ruhaanyag 91% vizet tartalmaz . Az anyag tömege száradás után lecsökken 3 g-ra. Hány százalék nedvesség van most az anyagban?";
             taskID = 1;
 
             if (studentData.task1 == 0) {
@@ -48,7 +48,7 @@ function taskHandler(taskId) {
             break;
         case 2:
             $("taskName").innerHTML = "Második feladat";
-            $("taskDesc").innerHTML = "Suspendisse mattis vel dui a aliquet. Nam lectus dolor, rutrum sit amet tristique eget, hendrerit at erat. Suspendisse potenti. Aenean gravida vestibulum rutrum. Nulla quis ex quis lectus facilisis lacinia. Etiam ultricies, tellus ac posuere bibendum, tellus justo porttitor ex, non sagittis dui tortor at diam. Nulla pretium lectus eget consectetur placerat. Donec sodales pellentesque lectus, eget tempus enim faucibus ut. Suspendisse mollis sem odio, ut convallis metus facilisis at.";
+            $("taskDesc").innerHTML = "Anna, Bea és Cili elmentek almát szedni. Mindegyiknek saját kosara volt. Amikor végeztek, Anna belenézett a többiek kosarába és ezt mondta: 'Ha Bea elvesz tőlem annyi almát, amennyi már a kosarában van, majd Cili elvesz Beától szintén annyit, amennyi már a kosárban van, végezetül én is elveszek Cilitől annyi almát, amennyi a kosaramban maradt, akkor a végén mindannyiunknak ugyanannyi almája lesz.' Mennyi volt az eredeti alma mennyiség a kosarakban, ha együtt összesen 240 almájuk volt és a csere után mindenkinek80almája lett a kosarában?";
             taskID = 2;
 
             if (studentData.task2 == 0) {
@@ -63,7 +63,7 @@ function taskHandler(taskId) {
             break;
         case 3:
             $("taskName").innerHTML = "Harmadik feladat";
-            $("taskDesc").innerHTML = "Integer hendrerit, ipsum et vulputate posuere, eros lacus pellentesque enim, nec sagittis turpis nisl eget tortor. Vivamus fringilla, quam id pellentesque euismod, dolor tortor blandit purus, pellentesque interdum odio urna et ex. Phasellus nec nisl scelerisque, elementum purus vitae, semper sem. Integer dictum, nibh a dictum varius, libero odio rutrum mi, sit amet congue urna velit at dui. Sed risus ligula, venenatis eget maximus nec, iaculis nec tellus. In quis malesuada eros. Proin ac elit non tellus finibus tristique. Phasellus lacinia nisl posuere sem consectetur cursus. Integer id fringilla magna, quis sagittis massa. Nullam a malesuada enim, eget eleifend massa. In faucibus rhoncus scelerisque. Aenean mi sapien, pharetra quis cursus vitae, interdum at quam. Donec pharetra ullamcorper libero, et laoreet lacus vehicula eu. Aliquam semper mi nec tempor vestibulum. Morbi accumsan sit amet nunc at finibus.";
+            $("taskDesc").innerHTML = "Egy 30 g tömegű ruhaanyag 82% vizet tartalmaz . Az anyag tömege száradás után lecsökken 18 g-ra. Hány százalék nedvesség van most az anyagban?";
             taskID = 3;
 
             if (studentData.task3 == 0) {
@@ -78,7 +78,7 @@ function taskHandler(taskId) {
             break;
         case 4:
             $("taskName").innerHTML = "Negyedik feladat";
-            $("taskDesc").innerHTML = "Fusce efficitur pulvinar leo, eu aliquet felis tincidunt sed. Morbi aliquet nulla augue, lacinia gravida velit auctor non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque dapibus ante diam, vitae sagittis justo vestibulum sit amet. Integer id neque id diam eleifend tempus vel at ex. Donec lacinia nisl sed pellentesque congue. Curabitur ullamcorper efficitur sodales. Mauris vestibulum laoreet massa, laoreet rutrum est fermentum posuere. Quisque ornare, justo ac consectetur blandit, nibh sem accumsan urna, ac tristique tellus dolor in nisi. Pellentesque sed tempus urna. Maecenas egestas gravida nisi sit amet aliquet. Phasellus porta tortor at eros tempus, nec posuere mauris venenatis. Sed bibendum molestie neque, eget porta tortor pharetra ac.";
+            $("taskDesc").innerHTML = "Két város között a távolság 320 km. Egy időben indul egymással szembe két vonat, az egyik 45 km/h a másik 35 km/h sebességgel. Az első városból ugyanakkor elindult egy szürkefejű albatrosz is, 50 km/h sebességgel. Elrepült a szembe jövő vonatig, ott visszafordult, és repült az első vonattal szemben. Ezzel találkozva ismét visszafordult, és repült a másik vonattal szemben és így tovább. Milyen távolságot repül be a szürkefejű albatrosz, míg a vonatok találkoznak?";
             taskID = 4;
 
             if (studentData.task4 == 0) {
@@ -93,7 +93,7 @@ function taskHandler(taskId) {
             break;
         case 5:
             $("taskName").innerHTML = "Ötödik feladat";
-            $("taskDesc").innerHTML = "Phasellus egestas bibendum ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut in luctus odio. Sed in nibh quis dui interdum consequat. Nunc faucibus congue ipsum quis faucibus. Nulla at molestie urna. Nulla facilisi. Proin sit amet lobortis nunc, nec rhoncus erat. Quisque ut aliquet neque. Etiam vel felis felis. Phasellus congue magna nec dignissim finibus. Etiam sit amet iaculis ipsum, sit amet hendrerit arcu. Proin massa mauris, lobortis ornare nisi sed, lacinia iaculis libero.";
+            $("taskDesc").innerHTML = "Egy farmernadrág árát 20 %-kal felemelték, majd amikor nem volt elég nagy a forgalom, a megemelt árat 25 %-kal csökkentették. Most 3600 Ft-ért lehet a farmert megvenni. Mennyi volt az eredeti ára? ";
             taskID = 5;
 
             if (studentData.task5 == 0) {
@@ -108,7 +108,7 @@ function taskHandler(taskId) {
             break;
         case 6:
             $("taskName").innerHTML = "Hatodik feladat";
-            $("taskDesc").innerHTML = "Maecenas molestie dui at magna dapibus, eu viverra arcu cursus. Morbi nibh massa, luctus non suscipit vel, ultrices vitae est. Mauris volutpat consectetur tellus id commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus porttitor quam nec leo auctor, et ornare erat vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In velit ante, lobortis eget feugiat vitae, scelerisque id libero. Sed pellentesque scelerisque leo. In quis erat urna. Vivamus semper non nisl quis sagittis.";
+            $("taskDesc").innerHTML = "Egy díszfaiskolában háromféle fát nevelnek (juhar, fenyő, platán) három téglalap elrendezésű parcellában. A fenyőfák parcellájában 4-gyel kevesebb sor van, mint a juharfákéban, és minden sorban 5-tel kevesebb fa van, mint ahány fa a juhar parcella egy sorában áll. 360-nal kevesebb fenyőfa van, mint juharfa. A platánok telepítésekor a juharokéhoz viszonyítva a sorok számát 3-mal, az egy sorban lévő fák számát 2-vel növelték. Így 228-cal több platánfát telepítettek, mint juhart. Hány sor van a juharfák parcellájában? Hány juharfa van egy sorban?";
             taskID = 6;
 
             if (studentData.task6 == 0) {
@@ -149,32 +149,32 @@ function taskHandler2(taskId) {
             break;
         case 1:
             $("taskName2").innerHTML = "Első feladat";
-            $("taskDesc2").innerHTML = "Curabitur vitae aliquam velit. Etiam rhoncus ac nibh aliquam mattis. Phasellus sem nisl, consequat vel porta id, rhoncus quis justo. Nunc id est eget mauris interdum aliquet in sit amet libero. Cras hendrerit turpis ex, ut sodales risus consectetur in. In dapibus fringilla gravida. Donec eu varius nisi, a luctus justo. Proin eu enim in massa tempor suscipit ut in est. Curabitur laoreet turpis convallis, volutpat erat venenatis, pellentesque turpis. Integer est dolor, ullamcorper vel tempus et, auctor nec mi. Duis porta rhoncus euismod. Vivamus nisl nisi, sodales non ullamcorper sit amet, maximus id lorem. Nullam quis sollicitudin est.";
+            $("taskDesc2").innerHTML = "Egy 6 g tömegű ruhaanyag 91% vizet tartalmaz . Az anyag tömege száradás után lecsökken 3 g-ra. Hány százalék nedvesség van most az anyagban?";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 10 pont jár.";
             break;
         case 2:
             $("taskName2").innerHTML = "Második feladat";
-            $("taskDesc2").innerHTML = "Suspendisse mattis vel dui a aliquet. Nam lectus dolor, rutrum sit amet tristique eget, hendrerit at erat. Suspendisse potenti. Aenean gravida vestibulum rutrum. Nulla quis ex quis lectus facilisis lacinia. Etiam ultricies, tellus ac posuere bibendum, tellus justo porttitor ex, non sagittis dui tortor at diam. Nulla pretium lectus eget consectetur placerat. Donec sodales pellentesque lectus, eget tempus enim faucibus ut. Suspendisse mollis sem odio, ut convallis metus facilisis at.";
+            $("taskDesc2").innerHTML = "Anna, Bea és Cili elmentek almát szedni. Mindegyiknek saját kosara volt. Amikor végeztek, Anna belenézett a többiek kosarába és ezt mondta: 'Ha Bea elvesz tőlem annyi almát, amennyi már a kosarában van, majd Cili elvesz Beától szintén annyit, amennyi már a kosárban van, végezetül én is elveszek Cilitől annyi almát, amennyi a kosaramban maradt, akkor a végén mindannyiunknak ugyanannyi almája lesz.' Mennyi volt az eredeti alma mennyiség a kosarakban, ha együtt összesen 240 almájuk volt és a csere után mindenkinek80almája lett a kosarában?";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 20 pont jár.";
             break;
         case 3:
             $("taskName2").innerHTML = "Harmadik feladat";
-            $("taskDesc2").innerHTML = "Integer hendrerit, ipsum et vulputate posuere, eros lacus pellentesque enim, nec sagittis turpis nisl eget tortor. Vivamus fringilla, quam id pellentesque euismod, dolor tortor blandit purus, pellentesque interdum odio urna et ex. Phasellus nec nisl scelerisque, elementum purus vitae, semper sem. Integer dictum, nibh a dictum varius, libero odio rutrum mi, sit amet congue urna velit at dui. Sed risus ligula, venenatis eget maximus nec, iaculis nec tellus. In quis malesuada eros. Proin ac elit non tellus finibus tristique. Phasellus lacinia nisl posuere sem consectetur cursus. Integer id fringilla magna, quis sagittis massa. Nullam a malesuada enim, eget eleifend massa. In faucibus rhoncus scelerisque. Aenean mi sapien, pharetra quis cursus vitae, interdum at quam. Donec pharetra ullamcorper libero, et laoreet lacus vehicula eu. Aliquam semper mi nec tempor vestibulum. Morbi accumsan sit amet nunc at finibus.";
+            $("taskDesc2").innerHTML = "Egy 30 g tömegű ruhaanyag 82% vizet tartalmaz . Az anyag tömege száradás után lecsökken 18 g-ra. Hány százalék nedvesség van most az anyagban?";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 30 pont jár.";
             break;
         case 4:
             $("taskName2").innerHTML = "Negyedik feladat";
-            $("taskDesc2").innerHTML = "Fusce efficitur pulvinar leo, eu aliquet felis tincidunt sed. Morbi aliquet nulla augue, lacinia gravida velit auctor non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque dapibus ante diam, vitae sagittis justo vestibulum sit amet. Integer id neque id diam eleifend tempus vel at ex. Donec lacinia nisl sed pellentesque congue. Curabitur ullamcorper efficitur sodales. Mauris vestibulum laoreet massa, laoreet rutrum est fermentum posuere. Quisque ornare, justo ac consectetur blandit, nibh sem accumsan urna, ac tristique tellus dolor in nisi. Pellentesque sed tempus urna. Maecenas egestas gravida nisi sit amet aliquet. Phasellus porta tortor at eros tempus, nec posuere mauris venenatis. Sed bibendum molestie neque, eget porta tortor pharetra ac.";
+            $("taskDesc2").innerHTML = "Két város között a távolság 320 km. Egy időben indul egymással szembe két vonat, az egyik 45 km/h a másik 35 km/h sebességgel. Az első városból ugyanakkor elindult egy szürkefejű albatrosz is, 50 km/h sebességgel. Elrepült a szembe jövő vonatig, ott visszafordult, és repült az első vonattal szemben. Ezzel találkozva ismét visszafordult, és repült a másik vonattal szemben és így tovább. Milyen távolságot repül be a szürkefejű albatrosz, míg a vonatok találkoznak?";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 40 pont jár.";
             break;
         case 5:
             $("taskName2").innerHTML = "Ötödik feladat";
-            $("taskDesc2").innerHTML = "Phasellus egestas bibendum ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut in luctus odio. Sed in nibh quis dui interdum consequat. Nunc faucibus congue ipsum quis faucibus. Nulla at molestie urna. Nulla facilisi. Proin sit amet lobortis nunc, nec rhoncus erat. Quisque ut aliquet neque. Etiam vel felis felis. Phasellus congue magna nec dignissim finibus. Etiam sit amet iaculis ipsum, sit amet hendrerit arcu. Proin massa mauris, lobortis ornare nisi sed, lacinia iaculis libero.";
+            $("taskDesc2").innerHTML = "Egy farmernadrág árát 20 %-kal felemelték, majd amikor nem volt elég nagy a forgalom, a megemelt árat 25 %-kal csökkentették. Most 3600 Ft-ért lehet a farmert megvenni. Mennyi volt az eredeti ára? ";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 50 pont jár.";
             break;
         case 6:
             $("taskName2").innerHTML = "Hatodik feladat";
-            $("taskDesc2").innerHTML = "Maecenas molestie dui at magna dapibus, eu viverra arcu cursus. Morbi nibh massa, luctus non suscipit vel, ultrices vitae est. Mauris volutpat consectetur tellus id commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus porttitor quam nec leo auctor, et ornare erat vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In velit ante, lobortis eget feugiat vitae, scelerisque id libero. Sed pellentesque scelerisque leo. In quis erat urna. Vivamus semper non nisl quis sagittis.";
+            $("taskDesc2").innerHTML = "Egy díszfaiskolában háromféle fát nevelnek (juhar, fenyő, platán) három téglalap elrendezésű parcellában. A fenyőfák parcellájában 4-gyel kevesebb sor van, mint a juharfákéban, és minden sorban 5-tel kevesebb fa van, mint ahány fa a juhar parcella egy sorában áll. 360-nal kevesebb fenyőfa van, mint juharfa. A platánok telepítésekor a juharokéhoz viszonyítva a sorok számát 3-mal, az egy sorban lévő fák számát 2-vel növelték. Így 228-cal több platánfát telepítettek, mint juhart. Hány sor van a juharfák parcellájában? Hány juharfa van egy sorban?";
             $("taskDescSmall2").innerHTML = "Ezért a feladatért 60 pont jár.";
             break;
     }
@@ -190,6 +190,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 10 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, 10, studentData.task2, studentData.task3, studentData.task4, studentData.task5, studentData.task6);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task1: 10
             });
@@ -199,6 +200,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 20 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, 20, studentData.task3, studentData.task4, studentData.task5, studentData.task6);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task2: 20
             });
@@ -209,6 +211,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 30 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, 30, studentData.task4, studentData.task5, studentData.task6);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task3: 30
             });
@@ -219,6 +222,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 40 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, 40, studentData.task5, studentData.task6);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task4: 40
             });
@@ -229,6 +233,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 50 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, studentData.task4, 50, studentData.task6);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task5: 50
             });
@@ -239,6 +244,7 @@ function writePoints() {
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 60 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, studentData.task4, studentData.task5, 60);
             generateProfile(studentData);
+            setTimeout(function () { classSpecificStudentConstructor(studentData); }, 500);
             return currentStudent.update({
                 task6: 60
             });
