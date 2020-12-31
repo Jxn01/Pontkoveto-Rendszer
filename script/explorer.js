@@ -1,12 +1,8 @@
 var taskID = 0;
 function taskHandler(taskId) {
 
-    clearInterval(timeLeft);
-    timeLeft = setInterval(myTimer, 1000);
-    baseSeconds = 5;
-    baseMinutes = 1; //percek+1
-    baseHours = 2; //órák+1
-    baseDays = 0;
+    clearInterval(timer);
+    timer = setInterval(myTimer, 1000);
 
     $("homeButton").className = "dropdown-item";
     $("task1Button").className = "dropdown-item";
@@ -38,80 +34,91 @@ function taskHandler(taskId) {
             $("taskName").innerHTML = "Első feladat";
             $("taskDesc").innerHTML = "Curabitur vitae aliquam velit. Etiam rhoncus ac nibh aliquam mattis. Phasellus sem nisl, consequat vel porta id, rhoncus quis justo. Nunc id est eget mauris interdum aliquet in sit amet libero. Cras hendrerit turpis ex, ut sodales risus consectetur in. In dapibus fringilla gravida. Donec eu varius nisi, a luctus justo. Proin eu enim in massa tempor suscipit ut in est. Curabitur laoreet turpis convallis, volutpat erat venenatis, pellentesque turpis. Integer est dolor, ullamcorper vel tempus et, auctor nec mi. Duis porta rhoncus euismod. Vivamus nisl nisi, sodales non ullamcorper sit amet, maximus id lorem. Nullam quis sollicitudin est.";
             taskID = 1;
+            
             if (studentData.task1 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 10 pontot kaphatsz a teljesítéséért.";
-                
+                rawLeft = calcTime(new Date(2021,1,2));
 
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 10 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
         case 2:
             $("taskName").innerHTML = "Második feladat";
             $("taskDesc").innerHTML = "Suspendisse mattis vel dui a aliquet. Nam lectus dolor, rutrum sit amet tristique eget, hendrerit at erat. Suspendisse potenti. Aenean gravida vestibulum rutrum. Nulla quis ex quis lectus facilisis lacinia. Etiam ultricies, tellus ac posuere bibendum, tellus justo porttitor ex, non sagittis dui tortor at diam. Nulla pretium lectus eget consectetur placerat. Donec sodales pellentesque lectus, eget tempus enim faucibus ut. Suspendisse mollis sem odio, ut convallis metus facilisis at.";
             taskID = 2;
+            
             if (studentData.task2 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 20 pontot kaphatsz a teljesítéséért.";
+                rawLeft = calcTime(new Date(2021,3,5));
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 20 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
         case 3:
             $("taskName").innerHTML = "Harmadik feladat";
             $("taskDesc").innerHTML = "Integer hendrerit, ipsum et vulputate posuere, eros lacus pellentesque enim, nec sagittis turpis nisl eget tortor. Vivamus fringilla, quam id pellentesque euismod, dolor tortor blandit purus, pellentesque interdum odio urna et ex. Phasellus nec nisl scelerisque, elementum purus vitae, semper sem. Integer dictum, nibh a dictum varius, libero odio rutrum mi, sit amet congue urna velit at dui. Sed risus ligula, venenatis eget maximus nec, iaculis nec tellus. In quis malesuada eros. Proin ac elit non tellus finibus tristique. Phasellus lacinia nisl posuere sem consectetur cursus. Integer id fringilla magna, quis sagittis massa. Nullam a malesuada enim, eget eleifend massa. In faucibus rhoncus scelerisque. Aenean mi sapien, pharetra quis cursus vitae, interdum at quam. Donec pharetra ullamcorper libero, et laoreet lacus vehicula eu. Aliquam semper mi nec tempor vestibulum. Morbi accumsan sit amet nunc at finibus.";
             taskID = 3;
+            
             if (studentData.task3 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 30 pontot kaphatsz a teljesítéséért.";
+                rawLeft = calcTime(new Date(2021,5,1));
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 30 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
         case 4:
             $("taskName").innerHTML = "Negyedik feladat";
             $("taskDesc").innerHTML = "Fusce efficitur pulvinar leo, eu aliquet felis tincidunt sed. Morbi aliquet nulla augue, lacinia gravida velit auctor non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque dapibus ante diam, vitae sagittis justo vestibulum sit amet. Integer id neque id diam eleifend tempus vel at ex. Donec lacinia nisl sed pellentesque congue. Curabitur ullamcorper efficitur sodales. Mauris vestibulum laoreet massa, laoreet rutrum est fermentum posuere. Quisque ornare, justo ac consectetur blandit, nibh sem accumsan urna, ac tristique tellus dolor in nisi. Pellentesque sed tempus urna. Maecenas egestas gravida nisi sit amet aliquet. Phasellus porta tortor at eros tempus, nec posuere mauris venenatis. Sed bibendum molestie neque, eget porta tortor pharetra ac.";
             taskID = 4;
+            
             if (studentData.task4 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 40 pontot kaphatsz a teljesítéséért.";
+                rawLeft = calcTime(new Date(2021,0,13));
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 40 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
         case 5:
             $("taskName").innerHTML = "Ötödik feladat";
             $("taskDesc").innerHTML = "Phasellus egestas bibendum ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut in luctus odio. Sed in nibh quis dui interdum consequat. Nunc faucibus congue ipsum quis faucibus. Nulla at molestie urna. Nulla facilisi. Proin sit amet lobortis nunc, nec rhoncus erat. Quisque ut aliquet neque. Etiam vel felis felis. Phasellus congue magna nec dignissim finibus. Etiam sit amet iaculis ipsum, sit amet hendrerit arcu. Proin massa mauris, lobortis ornare nisi sed, lacinia iaculis libero.";
             taskID = 5;
+            
             if (studentData.task5 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 50 pontot kaphatsz a teljesítéséért.";
+                rawLeft = calcTime(new Date(2021,0,25));
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 50 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
         case 6:
             $("taskName").innerHTML = "Hatodik feladat";
             $("taskDesc").innerHTML = "Maecenas molestie dui at magna dapibus, eu viverra arcu cursus. Morbi nibh massa, luctus non suscipit vel, ultrices vitae est. Mauris volutpat consectetur tellus id commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus porttitor quam nec leo auctor, et ornare erat vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In velit ante, lobortis eget feugiat vitae, scelerisque id libero. Sed pellentesque scelerisque leo. In quis erat urna. Vivamus semper non nisl quis sagittis.";
             taskID = 6;
+            
             if (studentData.task6 == 0) {
                 $("taskDoneButton").removeAttribute("disabled");
                 $("taskDescSmall").innerHTML = "Ezt a feladatot még nem teljesítetted, 60 pontot kaphatsz a teljesítéséért.";
+                rawLeft = calcTime(new Date(2021,1,24));
             } else {
                 $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 60 pont a jutalmad.";
                 $("taskDoneButton").setAttribute("disabled", "true");
-                baseDays = -1;
+                rawLeft = 0;
             }
             break;
     }
@@ -199,7 +206,7 @@ function writePoints() {
     switch (taskID) {
 
         case 1:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 10 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, 10, studentData.task2, studentData.task3, studentData.task4, studentData.task5, studentData.task6);
@@ -208,7 +215,7 @@ function writePoints() {
                 task1: 10
             });
         case 2:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 20 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, 20, studentData.task3, studentData.task4, studentData.task5, studentData.task6);
@@ -218,7 +225,7 @@ function writePoints() {
             });
 
         case 3:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 30 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, 30, studentData.task4, studentData.task5, studentData.task6);
@@ -228,7 +235,7 @@ function writePoints() {
             });
 
         case 4:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 40 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, 40, studentData.task5, studentData.task6);
@@ -238,7 +245,7 @@ function writePoints() {
             });
 
         case 5:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 50 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, studentData.task4, 50, studentData.task6);
@@ -248,7 +255,7 @@ function writePoints() {
             });
 
         case 6:
-            baseDays = -1;
+            rawLeft = 0;
             $("taskDoneButton").setAttribute("disabled", "true");
             $("taskDescSmall").innerHTML = "Ezt a feladatot sikeresen teljesítetted, 60 pont a jutalmad.";
             studentData = new Student(studentData.badge1, studentData.badge2, studentData.badge3, studentData.class, studentData.email, studentData.name, studentData.task1, studentData.task2, studentData.task3, studentData.task4, studentData.task5, 60);
