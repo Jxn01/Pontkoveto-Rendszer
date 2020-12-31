@@ -24,15 +24,15 @@ function generateProfile(user) {
         $("osztalyDiak").innerHTML = "Osztály: " + user.class;
         $("keszDbDiak").innerHTML = "Kész feladatok száma: " + taskDoneCount;
         $("badgeDbDiak").innerHTML = "Megszerzett badge-ek száma: " + user.sumBadges();
-        $("progress-bar").innerHTML = Math.floor((user.sumPoints() / 210) * 100) +"%";
-        $("progress-bar").style.width = Math.floor((user.sumPoints() / 210) * 100) +"%";
-        if(user.badge1){
+        $("progress-bar").innerHTML = Math.floor((user.sumPoints() / 210) * 100) + "%";
+        $("progress-bar").style.width = Math.floor((user.sumPoints() / 210) * 100) + "%";
+        if (user.badge1) {
             $("bronze").style.visibility = "visible";
         }
-        if(user.badge2){
+        if (user.badge2) {
             $("silver").style.visibility = "visible";
         }
-        if(user.badge3){
+        if (user.badge3) {
             $("gold").style.visibility = "visible";
         }
     }
