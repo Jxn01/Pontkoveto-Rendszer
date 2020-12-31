@@ -1,29 +1,9 @@
-function $(id){
-    return document.getElementById(id);
+function generateBoard(element) {
+    $("leaderboard").innerHTML += "<li class='list-group-item'>" + element.name + ": 1. feladat: " + element.task1 + " pont; 2. feladat: " + element.task2 + " pont; 3. feladat: " + element.task3 + " pont; 4. feladat: " + element.task4 + " pont; 5. feladat: " + element.task5 + " pont; 6. feladat: " + element.task6 + " pont; összesen: " + sumScore(element) + " pont</li>";
 }
-
-var dataSource = [["Béla",1,2,9,4,3,6],["Jani",1,2,3,7,5,6],["Sándor",1,2,3,4,5,6]];
-
-function generateBoard(source){
-    let result = "";
-    for (let i = 0; i < source.length; i++) {
-        result += "<li class='list-group-item'>"+source[i][0]+": "+source[i][1]+"; "+source[i][2]+"; "+source[i][3]+"; "+source[i][4]+"; "+source[i][5]+"; "+source[i][6]+" összesen: "+sumScore(source[i])+"</li>";
-    }
-    $("leaderboard").innerHTML = result;
+ 
+function sumScore(element) {
+    let sum;
+    sum = element.task1 + element.task2 + element.task3 + element.task4 + element.task5 + element.task6;
+    return sum;
 }
-
-function sumScore(scores){
-    summary = 0;
-    
-    for(let i=1; i<7; i++){
-        summary += scores[i];
-    }
-
-    return summary;
-}
-
-function init(){
-    generateBoard(dataSource);
-}
-
-window.addEventListener("load",init,false);

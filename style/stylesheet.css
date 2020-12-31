@@ -85,3 +85,25 @@ body {
 #bronze {
     visibility: hidden;
 }
+
+#login {
+    width: 20vw;
+}
+
+#loginButton{
+    width: 9vw;
+    margin: 10px;
+}
+
+#toRegPageButton{
+    width: 9vw;
+    margin: 10px;
+}
+
+#timerDiv{
+    visibility: hidden;
+}
+
+#progress-bar{
+    width: 0%;
+}
