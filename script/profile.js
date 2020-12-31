@@ -40,6 +40,5 @@ function generateProfile(user) {
         $("teacher-name").innerHTML = user.name;
         $("emailTanar").innerHTML = "E-mail cím: " + user.email;
         $("osztalyTanar").innerHTML = "Osztály: " + user.class;
-        $("tanuloDbTanar").innerHTML = "Beosztott tanulók száma: " + "";
     }
 }
