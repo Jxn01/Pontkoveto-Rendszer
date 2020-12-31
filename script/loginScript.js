@@ -71,9 +71,13 @@ var checkboxError = false;
 
 var studentData;
 
+var student;
+
 var students = new Array();
 
 var tasks = [];
+
+    var studentCount = 0;
 
 setTimeout(function () {
     taskConstructor();
@@ -156,6 +160,28 @@ function logout() {
         $("gold").style.visibility = "hidden";
         $("silver").style.visibility = "hidden";
         $("bronze").style.visibility = "hidden";
+        $("taskName").innerHTML = "Kedves tanuló!";
+        $("taskDesc").innerHTML = "Ezen a felületen a feladataidat tudod teljesíteni, minden feladatért meghatározott mennyiségű pont jár, amit a feladatoknál láthatsz. Ezen felül az összes pontszámodat a profilodban, az összesített teljesítményt fentebb, az adott feladathoz tartozó időt majd lentebb láthatod. Ha kiemelkedően jól teljesítesz, a tanárod elérhetőve tehet számodra bizonyos badge-eket, ezeket fentebb láthatod majd.";
+        $("taskDescSmall").innerHTML = "";
+        $("homeButton").className = "dropdown-item active";
+        $("taskDoneButton").style.visibility = "hidden";
+        $("timerDiv").style.visibility = "hidden";
+        $("task1Button").className = "dropdown-item";
+        $("task2Button").className = "dropdown-item";
+        $("task3Button").className = "dropdown-item";
+        $("task4Button").className = "dropdown-item";
+        $("task5Button").className = "dropdown-item";
+        $("task6Button").className = "dropdown-item";
+        $("task1Button2").className = "dropdown-item";
+        $("task2Button2").className = "dropdown-item";
+        $("task3Button2").className = "dropdown-item";
+        $("task4Button2").className = "dropdown-item";
+        $("task5Button2").className = "dropdown-item";
+        $("task6Button2").className = "dropdown-item";
+        $("homeButton2").className = "dropdown-item active";
+        $("taskName2").innerHTML = "Kedves tanár úr/tanárnő!";
+        $("taskDesc2").innerHTML = "Ezen a felületen az Önhöz rendelt tanulók feladatainak megoldásait tudja követni. Lentebb a nevük mellett az egyes feladatokhoz kapott pontokat láthatja, illetve, hogy késedelmesen, vagy még a határidő lejárta előtt adta be megoldását. Jobbra a badge gombbal badge-ekkel jutalmazhatja a tanulókat kiemelkedő teljesítményükért. A feladatokhoz tartozó információkat a lentebb található feladatok menü alatt találhatja.";
+        $("taskDescSmall2").innerHTML = "";
     }).catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -169,14 +195,13 @@ function loggedIn(teacher, UID) {
     if (teacher) {
         $("loginDiv").style.visibility = "hidden";
         $("teacherDiv").style.visibility = "visible";
-        var userDoc = database.collection("teachers").doc(UID);
-
         database.collection("teachers").doc(UID)
             .withConverter(teacherConverter)
             .get().then(function (doc) {
                 if (doc.exists) {
                     var teacherData = doc.data();
-                    userSetterTeacher(teacherData);
+                    generateProfile(teacherData);
+                    classSpecificStudentConstructorForTeacher(teacherData);
                 } else {
                     console.log("No such document!");
                 }
@@ -194,7 +219,7 @@ function loggedIn(teacher, UID) {
             .get().then(function (doc) {
                 if (doc.exists) {
                     studentData = doc.data();
-                    userSetterStudent(studentData);
+                    generateProfile(studentData);
                     classSpecificStudentConstructor(studentData);
                 } else {
                     console.log("No such document!");
@@ -204,31 +229,6 @@ function loggedIn(teacher, UID) {
             });
     }
 
-}
-
-function userSetterStudent(studentData) {
-    $("student-name").innerHTML = studentData.name;
-    generateProfile(studentData);
-    $("progress-bar").innerHTML = Math.floor((studentData.sumPoints() / 210) * 100) +"%";
-    $("progress-bar").style.width = Math.floor((studentData.sumPoints() / 210) * 100) +"%";
-    if(studentData.badge1){
-        $("bronze").style.visibility = "visible";
-    }
-    if(studentData.badge2){
-        $("silver").style.visibility = "visible";
-    }
-    if(studentData.badge3){
-        $("gold").style.visibility = "visible";
-    }
-}
-
-function userSetterTeacher(teacherData) {
-    $("teacher-name").innerHTML = teacherData.name;
-    generateProfile(teacherData);
-}
-
-function pointWriter() {
-    
 }
 
 function taskConstructor() {
@@ -248,13 +248,24 @@ function taskConstructor() {
 }
 
 function classSpecificStudentConstructor(studentData) {
-    let student;
     database.collection("students").where("class", "==", studentData.class).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             student = new Student(doc.data().badge1, doc.data().badge2, doc.data().badge3, doc.data().class, doc.data().email, doc.data().name, doc.data().task1, doc.data().task2, doc.data().task3, doc.data().task4, doc.data().task5, doc.data().task6, doc.data().teacher);
-                generateBoard(student);
+            generateBoard(student);
         });
     });
+}
+
+function classSpecificStudentConstructorForTeacher(teacherData) {
+    let student;
+    database.collection("students").where("class", "==", teacherData.class).get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            student = new Student(doc.data().badge1, doc.data().badge2, doc.data().badge3, doc.data().class, doc.data().email, doc.data().name, doc.data().task1, doc.data().task2, doc.data().task3, doc.data().task4, doc.data().task5, doc.data().task6, doc.data().teacher);
+            generateBoardTeacher(student);
+            studentCount++;
+        });
+    });
+    setTimeout(function () { $("tanuloDbTanar").innerHTML += studentCount; }, 1000);
 }
 
 class Student {
