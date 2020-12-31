@@ -24,7 +24,7 @@ function myTimer() {
     if(baseDays<0){
         clearInterval(timeLeft);
         setTimeout(function () {
-            $("timer").innerHTML = "Lejárt az idő balfasz";
+            $("timer").innerHTML = "Ez a feladat már nem elérhető";
         }, 10);
     }
     
