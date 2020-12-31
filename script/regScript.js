@@ -92,7 +92,8 @@ function writeUserData(userId, name, email, sClass, teacher) {
         database.collection("teachers").doc(userId).set({
             name: name,
             email: email,
-            class: sClass
+            class: sClass,
+            teacher: teacher
         });
     } else {
         database.collection("students").doc(userId).set({
@@ -107,7 +108,8 @@ function writeUserData(userId, name, email, sClass, teacher) {
             task6: 0,
             badge1: false,
             badge2: false,
-            badge3: false
+            badge3: false,
+            teacher: teacher
         });
     }
 }
