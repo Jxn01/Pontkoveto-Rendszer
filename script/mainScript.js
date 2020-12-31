@@ -77,7 +77,7 @@ var students = new Array();
 
 var tasks = [];
 
-    var studentCount = 0;
+var studentCount = 0;
 
 setTimeout(function () {
     taskConstructor();
@@ -89,11 +89,27 @@ function $(id) {
 }
 
 function init() {
+    myTimer();
     const form = document.querySelector("#login");
     form.addEventListener("submit", login);
     $("toRegPageButton").addEventListener("click", backToRegPage);
     $("logoutButtonStudent").addEventListener("click", logout);
     $("logoutButtonTeacher").addEventListener("click", logout);
+    $("homeButton").addEventListener("click", function () { taskHandler(0); });
+    $("task1Button").addEventListener("click", function () { taskHandler(1); });
+    $("task2Button").addEventListener("click", function () { taskHandler(2); });
+    $("task3Button").addEventListener("click", function () { taskHandler(3); });
+    $("task4Button").addEventListener("click", function () { taskHandler(4); });
+    $("task5Button").addEventListener("click", function () { taskHandler(5); });
+    $("task6Button").addEventListener("click", function () { taskHandler(6); });
+    $("taskDoneButton").addEventListener("click", function () { writePoints(); });
+    $("homeButton2").addEventListener("click", function () { taskHandler2(0); });
+    $("task1Button2").addEventListener("click", function () { taskHandler2(1); });
+    $("task2Button2").addEventListener("click", function () { taskHandler2(2); });
+    $("task3Button2").addEventListener("click", function () { taskHandler2(3); });
+    $("task4Button2").addEventListener("click", function () { taskHandler2(4); });
+    $("task5Button2").addEventListener("click", function () { taskHandler2(5); });
+    $("task6Button2").addEventListener("click", function () { taskHandler2(6); });
 }
 
 function login(event) {
@@ -208,7 +224,6 @@ function loggedIn(teacher, UID) {
             }).catch(function (error) {
                 console.log("Error getting document:", error);
             });
-
     } else {
         $("loginDiv").style.visibility = "hidden";
         $("studentDiv").style.visibility = "visible";
@@ -229,22 +244,6 @@ function loggedIn(teacher, UID) {
             });
     }
 
-}
-
-function taskConstructor() {
-    for (var i = 1; i < 7; i++) {
-        database.collection("tasks").doc("task" + i)
-            .withConverter(taskConverter)
-            .get().then(function (doc) {
-                if (doc.exists) {
-                    tasks.push(doc.data());
-                } else {
-                    throw "A dokumentum nem létezik."
-                }
-            }).catch(function (error) {
-                console.log("Error getting document:", error);
-            });
-    }
 }
 
 function classSpecificStudentConstructor(studentData) {
@@ -317,13 +316,5 @@ class Teacher {
     }
     toString() {
         return this.class + ", " + this.email + ", " + this.name + ", " + this.teacher;
-    }
-}
-
-class Task {
-    constructor(deadline, points, students) {
-        this.deadline = deadline;
-        this.points = points;
-        this.students = students;
     }
 }

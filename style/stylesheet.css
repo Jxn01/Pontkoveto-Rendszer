@@ -32,10 +32,9 @@ body {
     margin-top: 10px;
 }
 
-.navbar-teacher{
+.navbar-teacher {
     margin-top: 10px;
 }
-
 
 #failedLogout {
     visibility: hidden;
@@ -90,20 +89,20 @@ body {
     width: 20vw;
 }
 
-#loginButton{
+#loginButton {
     width: 9vw;
     margin: 10px;
 }
 
-#toRegPageButton{
+#toRegPageButton {
     width: 9vw;
     margin: 10px;
 }
 
-#timerDiv{
+#timerDiv {
     visibility: hidden;
 }
 
-#progress-bar{
+#progress-bar {
     width: 0%;
 }
