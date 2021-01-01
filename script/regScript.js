@@ -78,8 +78,8 @@ function validation() {
         throw "Minden mezőt ki kell tölteni!";
     }
 
-    if (document.querySelector("#inputOMReg").value.length != 7) {
-        throw "Az OM azonosító hossza 7 karakter kell, hogy legyen!";
+    if (document.querySelector("#inputOMReg").value.length != 11) {
+        throw "Az OM azonosító hossza 11 karakter kell, hogy legyen!";
     }
 
     if (document.querySelector("#inputOMReg").value.replaceAll(/[A-ZÍÉŐÚŰÁÓÜÖ]/gi, "").length != document.querySelector("#inputOMReg").value.length) {
