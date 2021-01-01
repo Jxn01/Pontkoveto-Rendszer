@@ -53,36 +53,13 @@ var teacherConverter = {
     }
 };
 
-var taskConverter = {
-    toFirestore: function (task) {
-        return {
-            deadline: task.deadline,
-            points: task.points,
-            students: task.students
-        };
-    },
-    fromFirestore: function (snapshot, options) {
-        const data = snapshot.data(options);
-        return new Task(data.deadline, data.points, data.students);
-    }
-};
-
 var checkboxError = false;
 
 var studentData;
 
 var student;
 
-var students = new Array();
-
-var tasks = [];
-
 var studentCount = 0;
-
-setTimeout(function () {
-    taskConstructor();
-}, 1000);
-
 
 function $(id) {
     return document.getElementById(id);
